@@ -1,0 +1,23 @@
+./configure \
+    --with-apxs2=/usr/local/httpd/bin/apxs \
+    --disable-cgi \
+    --enable-magic-quotes \
+    --disable-ipv6 \
+    --with-openssl \
+    --with-zlib \
+    --with-bz2=/usr \
+    --enable-calendar \
+    --with-curl \
+    --enable-exif \
+    --with-freetype-dir \
+    --enable-mbstring \
+    --with-mysql=mysqlnd \
+    --with-pdo-mysql=mysqlnd \
+    --with-pdo-odbc=unixODBC,/usr/local/unixODBC \
+    --without-pdo-sqlite \
+    --without-sqlite \
+    --without-sqlite3 \
+    --enable-soap \
+    --enable-zip \
+    --with-pear
+

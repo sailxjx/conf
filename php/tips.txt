@@ -1,0 +1,70 @@
+httpd安装配置：
+1.安装apr：
+	./configure --prefix=/usr/local/apr
+2.安装apr-util
+	./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr
+3.安装pcre
+	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+	首选需要安装有g++或gcc-c++
+	./configure --prefix=/usr/local/pcre & make & make install
+4.安装httpd
+	./configure \
+    --prefix=/usr/local/httpd \
+    --with-apr=/usr/local/apr \
+    --with-apr-util=/usr/local/apr-util \
+    --with-pcre=/usr/local/pcre \
+    --enable-cache \
+    --enable-mem-cache \
+    --enable-mime-magic \
+    --enable-expires \
+    --enable-headers \
+    --enable-usertrack \
+    --enable-unique-id \
+    --enable-proxy \
+    --enable-proxy-connect \
+    --enable-proxy-http \
+    --enable-proxy-balancer \
+    --disable-autoindex \
+    --disable-cgid \
+    --disable-cgi \
+    --disable-userdir \
+    --enable-rewrite \
+    --enable-so \
+    --disable-actions \
+    --with-mpm=worker
+5.安装php
+	*遇见木有找到libxml-config
+	安装libxml2-dev
+	*遇见木哟找到openssl
+	安装openssl-1.0.1.tar.gz
+	*Cannot find libz
+	安装zlib-dev apt-get install zlib1g-dev
+	*configure: error: Please reinstall the BZip2 distribution
+	apt-get install libbz2-dev
+	*configure: error: Please reinstall the libcurl distribution
+	apt-get install libcurl4-gnutls-dev
+	*configure: error: jpeglib.h not found.
+	./configure \
+    --with-apxs2=/usr/local/httpd/bin/apxs \
+    --disable-cgi \
+    --enable-magic-quotes \
+    --disable-ipv6 \
+    --with-openssl \
+    --with-zlib \
+    --with-bz2=/usr \
+    --enable-calendar \
+    --with-curl \
+    --enable-exif \
+    --with-freetype-dir \
+    --enable-mbstring \
+    --with-mysql=mysqlnd \
+    --with-pdo-mysql=mysqlnd \
+    --with-pdo-odbc=unixODBC,/usr/local/unixODBC \
+    --without-pdo-sqlite \
+    --without-sqlite \
+    --without-sqlite3 \
+    --enable-soap \
+    --enable-zip \
+    --with-pear
+	
+	
