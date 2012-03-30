@@ -1,6 +1,5 @@
 ./configure \
     --with-apxs2=/usr/local/httpd/bin/apxs \
-    --disable-cgi \
     --enable-magic-quotes \
     --disable-ipv6 \
     --with-openssl \
