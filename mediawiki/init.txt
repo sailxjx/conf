@@ -1,0 +1,1 @@
+php install.php --server=http://www.tristan.local.com --dbuser=root --dbpass=123456 --dbserver=127.0.0.1 --installdbuser=root --installdbpass=123456 --pass=88037360 mwiki tristan
