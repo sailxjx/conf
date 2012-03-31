@@ -1,8 +1,11 @@
 ./configure \
+    --prefix=/usr/local/php \
+    --with-config-file-path=/usr/local/php \
+    --enable-fpm \
     --with-apxs2=/usr/local/httpd/bin/apxs \
+    --with-pdo-odbc=unixODBC,/usr/local/unixODBC \
     --disable-cgi \
-    --enable-magic-quotes \
-    --disable-ipv6 \
+    --enable-pcntl \
     --with-openssl \
     --with-zlib \
     --with-bz2=/usr \
@@ -13,10 +16,6 @@
     --enable-mbstring \
     --with-mysql=mysqlnd \
     --with-pdo-mysql=mysqlnd \
-    --with-pdo-odbc=unixODBC,/usr/local/unixODBC \
-    --without-pdo-sqlite \
-    --without-sqlite \
-    --without-sqlite3 \
     --enable-soap \
     --enable-zip \
     --with-pear

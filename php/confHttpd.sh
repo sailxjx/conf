@@ -1,8 +1,8 @@
 ./configure \
     --prefix=/usr/local/httpd \
-    --with-apr=/usr/local/apr \
-    --with-apr-util=/usr/local/apr-util \
-    --with-pcre=/usr/local/pcre \
+    --with-apr=/usr/local/lib/apr \
+    --with-apr-util=/usr/local/lib/apr-util \
+    --with-pcre=/usr/local/lib/pcre \
     --enable-cache \
     --enable-mem-cache \
     --enable-mime-magic \
@@ -14,11 +14,6 @@
     --enable-proxy-connect \
     --enable-proxy-http \
     --enable-proxy-balancer \
-    --disable-autoindex \
-    --disable-cgid \
-    --disable-cgi \
-    --disable-userdir \
     --enable-rewrite \
     --enable-so \
-    --disable-actions \
     --with-mpm=worker
