@@ -104,4 +104,3 @@ fi
 
 export PATH=$PATH:$HOME/bin
 export PS1='\[\e[1;35m\]\u\[\e[m\]@\[\e[1;32m\]\h:\[\e[0m\e[1;34m\]\w\[\e[m\]\$\[\e[1;31m\]$(__git_ps1 "[%s]")\[\e[m\] '
-
