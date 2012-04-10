@@ -1,10 +1,14 @@
 #!/bin/bash
 eval `ssh-agent`
 ssh-add /home/tristan/.ssh/id_xjx_ubuntu_rsa
+DATETIME=`date +%x%T`
+MSG="daily sync: ${DATETIME}"
+echo ${MSG}
 dailySync(){
     cd $1
+    echo "sync dir: $1"
     git add .
-    git ct 'daily sync'
+    git ct "${MSG}"
     git pull
     git push
 }
