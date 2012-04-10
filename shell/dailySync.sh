@@ -1,7 +1,7 @@
 #!/bin/bash
-eval `ssh-agent -s`
+eval `ssh-agent`
 ssh-add /home/tristan/.ssh/id_xjx_ubuntu_rsa
-ssh-add /home/tristan/.ssh/id_rsa
+#ssh-add /home/tristan/.ssh/id_rsa
 dailySync(){
     cd $1
     git add .
