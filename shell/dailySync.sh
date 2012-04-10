@@ -1,5 +1,5 @@
 #!/bin/bash
-#eval `ssh-agent -s`
+eval `ssh-agent -s`
 dailySync(){
     cd $1
     git add .
