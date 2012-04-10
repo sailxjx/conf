@@ -1,7 +1,6 @@
 #!/bin/bash
 eval `ssh-agent`
 ssh-add /home/tristan/.ssh/id_xjx_ubuntu_rsa
-# ssh-add /home/tristan/.ssh/id_rsa
 dailySync(){
     cd $1
     git add .
@@ -17,3 +16,5 @@ for DIR in ${ARR_DIRS[@]}
 do
     dailySync ${DIR}
 done
+
+kill $SSH_AGENT_PID
