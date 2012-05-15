@@ -17,8 +17,9 @@ CODE_DIR='/home/tristan/coding'
 ARR_DIRS=("${CODE_DIR}/conf"\
           "${CODE_DIR}/loli"\
           "${CODE_DIR}/exp"\
-          "${CODE_DIR}/soul"\ 
-          "${CODE_DIR}/njlab")
+          "${CODE_DIR}/soul"\
+          "${CODE_DIR}/njlab"\
+          "${CODE_DIR}/eclipse/eton")
 LEN_ARR_DIRS=${#ARR_DIRS[@]}
 for DIR in ${ARR_DIRS[@]}
 do
