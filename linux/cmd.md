@@ -9,3 +9,7 @@
 * tar
     压缩 tar -cvzf {file} {dir}
     解压 tar -xvf {file}
+* mount -a
+    mount //192.168.0.55/d$ /usr/local/win55 -t cifs -o default,username=administrator,password=fanli123,uid=1000,gid=1000
+    修改/etc/fstab 之后使用mount -a生效
+    [mount命令详解及实例分析](http://www.diybl.com/course/6_system/linux/Linuxjs/2008827/137937.html)
