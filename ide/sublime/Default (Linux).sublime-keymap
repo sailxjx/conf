@@ -1,4 +1,5 @@
 [
 	{ "keys": ["ctrl+\\"], "command": "auto_complete" },
-	{ "keys": ["ctrl+e"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} }
+	{ "keys": ["ctrl+e"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["alt+shift+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} }
 ]
