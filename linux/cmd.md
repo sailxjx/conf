@@ -1,5 +1,7 @@
 ###### ch*
 * `chmod` 文件权限
+    +X 只有当文件为目录文件，或者其他类型的用户有可执行权限时，才将文件权限设置可执行
+    [Chmod](http://zh.wikipedia.org/wiki/Chmod) 
 * `chgrp` 文件用户组
 * `chown` 文件用户
 
