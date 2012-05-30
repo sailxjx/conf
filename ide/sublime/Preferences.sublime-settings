@@ -2,5 +2,8 @@
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"font_face": "YaHei Consolas Hybrid",
-	"ignored_packages": []
+	"font_size": 10.0,
+	"ignored_packages":
+	[
+	]
 }

@@ -1,5 +1,9 @@
 #!/bin/bash
 idea='/home/tristan/coding/conf/ideas/idea.md';
+if [ $1 = 'show' ] && [ -f ${idea} ]; then
+    cat ${idea}
+    exit
+fi
 dateTime=`date +%x%T`
 if [ -f ${idea} ]; then
     ideaLines=`expr $(cat ${idea}|wc -l) + 1` #plus 1 on current lines
