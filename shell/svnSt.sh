@@ -5,6 +5,8 @@ svnDir=(\
     "${codeDir}static" \
     "${codeDir}search" \
     "${codeDir}rbac"\
+    "${codeDir}passport"\
+    "${codeDir}travel"\
     )
 if [ ! -e $1 ]; then
     cmd=$1
