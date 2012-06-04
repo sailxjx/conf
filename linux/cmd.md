@@ -28,3 +28,6 @@
 
 ###### ldconfig
 * 配置动态链接库so 
+
+###### service
+* service mysql stop|start|restart 
