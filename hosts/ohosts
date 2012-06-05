@@ -37,7 +37,7 @@
 203.208.46.29 lh2.googleusercontent.com
 203.208.46.29 lh1.googleusercontent.com
 ##dev block
-127.0.0.1       www.google-analytics.com
+#127.0.0.1       www.google-analytics.com
 127.0.0.1       s.anjuke.com
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback
