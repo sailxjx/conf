@@ -78,7 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -ahlF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -102,5 +102,28 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:$HOME/bin:$HOME/sdk/android/tools
-export PS1='\[\e[1;35m\]\u\[\e[m\]@\[\e[1;32m\]\h:\[\e[0m\e[1;34m\]\w\[\e[m\]\$\[\e[1;31m\]$(__git_ps1 "[%s]")\[\e[m\] '
+#
+# If you want to see svn modifications:
+# export SVN_SHOWDIRTYSTATE=1 
+#
+# Put this in your PS1 like this:
+# PS1='\u@\h:\W\[\033[01;33m\]$(__git_svn_ps1)\[\033[00m\]$ '
+
+__git_svn_ps1(){
+    local b=''
+    if [[ -d ".svn" ]];then
+        brurl=(`svn info|awk '{FS="/"} /URL:/ {print $5,$6}'`)
+        if [[ ${brurl[0]} == 'branches' ]];then
+            b=[${brurl[1]}]
+        else
+            b=[${brurl[0]}!]
+        fi
+    else
+        b=`__git_ps1 "[%s]"`
+    fi
+    echo $b
+    return
+}
+
+export PATH=$PATH:$HOME/bin:/usr/local/go/bin
+export PS1='\[\e[1;35m\]\u\[\e[m\]@\[\e[1;32m\]\h:\[\e[0m\e[1;34m\]\w\[\e[m\]\$\[\e[1;31m\]$(__git_svn_ps1)\[\e[m\] '

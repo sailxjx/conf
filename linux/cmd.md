@@ -31,3 +31,9 @@
 
 ###### service
 * service mysql stop|start|restart 
+
+###### nslookup
+* nslookup www.google.com 查看域名信息
+
+###### expr
+* expr 1 + 2 //shell的运算
