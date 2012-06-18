@@ -37,3 +37,12 @@
 
 ###### expr
 * expr 1 + 2 //shell的运算
+
+###### wget
+* wget "http://www.google.com" -O - //-表示定向到标准输出流
+
+###### cut
+* echo 2012.6.18 | cut -d'.' -f-2
+
+###### bash中的正则表达式验证
+* [[ $a =~ regex ]]
