@@ -19,7 +19,9 @@ ARR_DIRS=("${CODE_DIR}/conf"\
           "${CODE_DIR}/exp"\
           "${CODE_DIR}/soul"\
           "${CODE_DIR}/njlab"\
-          "${CODE_DIR}/eclipse/eton")
+          "${CODE_DIR}/eclipse/eton"\
+          "${CODE_DIR}/sailxjx.github.com"\
+          "${CODE_DIR}/blog")
 LEN_ARR_DIRS=${#ARR_DIRS[@]}
 for DIR in ${ARR_DIRS[@]}
 do
