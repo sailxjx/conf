@@ -1,6 +1,5 @@
 127.0.0.1   static2.51fanli.net local.51fanli.com
-127.0.0.1   open.51fanli.com
-127.0.0.1   search.51fanli.com
+#127.0.0.1   search.51fanli.com
 127.0.0.1   10.51fanli.net
 127.0.0.1   rbac.51fanli.com
 127.0.0.1   fun.51fanli.com

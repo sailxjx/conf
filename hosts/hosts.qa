@@ -1,5 +1,6 @@
-192.168.0.178   static2.51fanli.net
-192.168.0.178   search.51fanli.com
-192.168.100.142 rbac.51fanli.com
-192.168.100.143 fun.51fanli.com
-192.168.100.100 www.51fanli.com
+#192.168.100.145 rbac.51fanli.com
+#192.168.100.145 fun.51fanli.com
+#192.168.100.181 www.51fanli.com
+192.168.100.96  www.51fanli.com
+192.168.100.156 static2.51fanli.net
+192.168.100.156 fun.51fanli.com passport.51fanli.com
