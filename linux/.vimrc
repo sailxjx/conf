@@ -102,3 +102,5 @@ set t_Co=256
 color ron
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
+set smartcase
+set ic
