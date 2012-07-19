@@ -53,3 +53,6 @@
 ###### ifconfig
 * ifconfig eth0:0 192.168.0.125 netmask 255.255.255.0 up    //设置ip别名，up立即启用
 * ifconfig eth0:0 down  //取消ip设置
+
+###### whois
+* 查看域名信息
