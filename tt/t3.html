@@ -28,5 +28,9 @@
         <a href="###" onclick="Ftrack('click','me1');">clickme1</a>
         <a href="###" onclick="Ftrack('click','me2')">clickme2</a>
         <a href="###" onclick="Ftrack('click','me3')">clickme3</a>
+        <form action="/t4.html" method="get">
+            <input type="checkbox" name="test" value="1" checked="checked" onclick="if(this.checked==true){this.checked=false;}else{this.checked=true;}"/>
+            <input type="submit">
+        </form>
     </body>
 </html>
