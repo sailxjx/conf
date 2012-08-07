@@ -38,26 +38,25 @@ at_underloff=%{$'\e[24m'%}
 at_blinkoff=%{$'\e[25m'%}
 at_reverseoff=%{$'\e[27m'%}
 at_strikeoff=%{$'\e[29m'%}
- 
- 
-PROMPT="${fg_pink}%n${fg_white}@${fg_lgreen}%m:${fg_blue}%~${fg_white}$ "
- 
+
+PROMPT="${fg_pink}%n${fg_white}@${fg_lblue}%m:${fg_blue}%${at_normal}$ "
+
 #Set the auto completion on
 autoload -U compinit
 compinit
- 
+
 #Lets set some options
 setopt correctall
 setopt autocd
 setopt auto_resume
- 
+
 ## Enables the extgended globbing features
 setopt extendedglob
- 
+
 #Set some ZSH styles
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
- 
+
 #Aliases
 ##ls, the common ones I use a lot shortened for rapid fire usage
 alias ls='ls --color' #I like color
@@ -65,3 +64,4 @@ alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
 alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+
