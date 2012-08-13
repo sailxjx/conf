@@ -1,0 +1,1 @@
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql5.5.27/  -DMYSQL_DATADIR=/data/mysql  -DWITH_INNOBASE_STORAGE_ENGINE=1  -DMYSQL_TCP_PORT=3306  -DMYSQL_UNIX_ADDR=/var/run/mysql/mysql.sock -DWITH_DEBUG=0
