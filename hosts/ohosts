@@ -17,6 +17,7 @@
 127.0.0.1   www.github.local.com
 127.0.0.1   boot.local.com
 127.0.0.1   office.local.com
+127.0.0.1   phabricator.local.com
 127.0.0.1   www.boot.local.com
 192.168.100.87  www.wiki.51fanli.com
 
