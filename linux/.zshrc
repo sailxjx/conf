@@ -37,6 +37,13 @@ source $ZSH/oh-my-zsh.sh
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# Set auto completion on
+autoload -U compinit
+compinit
+
+# Set options
+setopt nocorrectall
+
 # Set Path
 export PATH=$PATH:/sbin
 
