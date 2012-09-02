@@ -99,8 +99,11 @@ set smartindent
 set sts=4
 set sw=4
 set t_Co=256
-color ron
+color grb256
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
 set smartcase
 set ic
+
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
