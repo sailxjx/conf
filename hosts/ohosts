@@ -10,7 +10,6 @@
 127.0.0.1   soul.local.com
 127.0.0.1   m.soul.local.com 
 127.0.0.1   www.exp.local.com
-127.0.0.1   www.njlab.local.com
 127.0.0.1   www.cgit.local.com
 127.0.0.1   www.yii.local.com
 127.0.0.1   github.local.com
@@ -19,6 +18,7 @@
 127.0.0.1   office.local.com
 127.0.0.1   phabricator.local.com
 127.0.0.1   www.boot.local.com
+127.0.0.1   njlab.local.com www.njlab.local.com
 192.168.100.87  www.wiki.51fanli.com
 
 127.0.0.1   www.imgclck.com //广告host
