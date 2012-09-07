@@ -1,8 +1,10 @@
 {
-    "translate_tabs_to_spaces": true,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/IR_Black.tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"font_face": "YaHei Consolas Hybrid",
 	"font_size": 10.0,
-	"ignored_packages":[]
+	"ignored_packages":
+	[
+	],
+	"translate_tabs_to_spaces": true
 }
