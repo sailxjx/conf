@@ -6,9 +6,9 @@
     { "keys": ["ctrl+d"], "command": "find_under_expand" }, //选择下一个相同文本
     { "keys": ["alt+f3"], "command": "find_all_under" }, //选择全部相同文本，重命名重构
     { "keys": ["ctrl+shift+l"], "command": "split_selection_into_lines" }, //多行编辑
-    { "command": "navigate_to_definition", "keys": ["ctrl+right"] }, //跳转至下个tag 
-    { "command": "jump_back", "keys": ["ctrl+left"] }, //跳回上个tag
-    { "command": "rebuild_tags", "keys": ["ctrl+shift+t"] }, //重建ctags
+    { "keys": ["ctrl+shift+t"], "command": "rebuild_tags" }, //重建ctags
     { "keys": ["ctrl+shift+u"], "command": "upper_case" }, //转为大写
-    { "keys": ["ctrl+shift+l"], "command": "lower_case" } //转为小写
+    { "keys": ["ctrl+shift+l"], "command": "lower_case" }, //转为小写
+    { "keys": ["ctrl+right"], "command": "navigate_to_definition" }, //跳转至下个tag 
+    { "keys": ["ctrl+left"], "command": "jump_back" } //跳回上个tag
 ]
