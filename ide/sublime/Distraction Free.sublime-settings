@@ -1,0 +1,7 @@
+{
+    "line_numbers": true,      //是否显示行号
+    "gutter": true,            //是否显示边列
+    "wrap_width": 300,           //换行宽度(单位：字符)
+    "word_wrap": true,          //是否自动换行
+    "scroll_past_end": true     //滚动能否超过结尾
+}
