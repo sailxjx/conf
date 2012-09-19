@@ -1,0 +1,3 @@
+[submodule "ide/sublime/packages/PhpBeautifier"]
+	path = ide/sublime/packages/PhpBeautifier
+	url = /home/tristan/.config/sublime-text-2/Packages/PhpBeautifier
