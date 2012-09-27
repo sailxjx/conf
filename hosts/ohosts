@@ -19,6 +19,7 @@
 127.0.0.1   phabricator.local.com
 127.0.0.1   www.boot.local.com
 127.0.0.1   njlab.local.com www.njlab.local.com
+127.0.0.1   sysm.local.com
 127.0.0.1   zabbix.local.com
 192.168.100.87  www.wiki.51fanli.com rd.office.51fanli.com
 
