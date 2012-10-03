@@ -13,3 +13,5 @@
     ui=auto
 [diff]
     tool=vimdiff
+[push]
+    default = simple
