@@ -1,8 +1,8 @@
 ./configure \
     --prefix=/usr/local/httpd \
-    --with-apr=/usr/local/lib/apr \
-    --with-apr-util=/usr/local/lib/apr-util \
-    --with-pcre=/usr/local/lib/pcre \
+    --with-apr=/usr/local/apr \
+    --with-apr-util=/usr/local/apr \
+    --with-pcre=/usr \
     --enable-cache \
     --enable-mem-cache \
     --enable-mime-magic \
