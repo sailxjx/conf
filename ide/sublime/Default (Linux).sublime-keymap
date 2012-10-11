@@ -10,5 +10,6 @@
     { "keys": ["ctrl+shift+u"], "command": "upper_case" }, //转为大写
     { "keys": ["ctrl+shift+l"], "command": "lower_case" }, //转为小写
     { "keys": ["ctrl+right"], "command": "navigate_to_definition" }, //跳转至下个tag 
-    { "keys": ["ctrl+left"], "command": "jump_back" } //跳回上个tag
+    { "keys": ["ctrl+left"], "command": "jump_back" }, //跳回上个tag
+    { "keys": ["ctrl+shift+k"], "command": "toggle_side_bar" }
 ]
