@@ -56,3 +56,6 @@
 
 ###### whois
 * 查看域名信息
+
+###### 下载整站 
+* wget --restrict-file-name=ascii -m -c -nv -np -k -E -p -R=exe,zip http://www.xxx.com
