@@ -1,0 +1,1 @@
+rsync -avzC --timeout=600 --delete --delete-after --include='distributions/*.exe' rsync.php.net::phpweb --include='manual/en/' --include='manual/en/**' --include='manual/zh/' --include='manual/zh/**' --exclude='manual/**' --exclude='distributions/manual/**' /usr/local/webdata/www.php.net
