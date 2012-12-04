@@ -59,3 +59,7 @@
 
 ###### 下载整站 
 * wget --restrict-file-name=ascii -m -c -nv -np -k -E -p -R=exe,zip http://www.xxx.com
+
+###### sort
+* sort -n #数字排序
+* e.g. du -a|sort -n
