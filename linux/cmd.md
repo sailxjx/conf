@@ -63,3 +63,6 @@
 ###### sort
 * sort -n #数字排序
 * e.g. du -a|sort -n
+
+###### 修改默认shell
+* chsh -s /bin/zsh
