@@ -36,7 +36,9 @@
 * nslookup www.google.com 查看域名信息
 
 ###### expr
-* expr 1 + 2 //shell的运算
+* expr 1 + 2 //shell的运算，计算
+* bc: echo 1+2|bc
+* echo $((1+2))
 
 ###### wget
 * wget "http://www.google.com" -O - //-表示定向到标准输出流
@@ -75,3 +77,29 @@
 
 ###### pkill -u tristan
 * 剔除用户
+
+###### ctrl+z, fg, bg, jobs
+* 后台暂停，恢复前台运行，后台继续执行，查看后台进程
+
+* cd -
+回到上一个工作目录
+
+* date -d "2010-10-18 00:00:00" +%s  #字符串转时间戳
+* date -d @1287331200  "+%x %T" #时间戳转字符串
+
+* echo $a 无引号时会去除\t\n
+* echo "$a" 有引号会保留结果中的\t\n
+
+* 多行输出
+> AWK_SCRIPT=$(cat <<AWK
+> BEGIN {
+>   a[$1]++
+>   if (b != $1) {
+>       print $1
+>       b = $1
+>   }
+> }
+> AWK)
+
+* zip打包 zip -r verify.zip verify/
+* zip解压 unzip verify.zip
