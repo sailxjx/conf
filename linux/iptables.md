@@ -36,5 +36,9 @@
 > -p udp --sport 53    源端口
 基于协议和端口
 
+网关
+iptables -A FORWORD -s 192.168.1.0/24 -d 10.1.1.0/24 -j DROP #禁止
 
+NAT跳转
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-dest 192.168.1.10
 

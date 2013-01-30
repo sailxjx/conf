@@ -103,3 +103,10 @@
 
 * zip打包 zip -r verify.zip verify/
 * zip解压 unzip verify.zip
+
+* grep -P 使用perl正则
+
+* top -bn1 |grep node  #抓取所有node进程
+
+* modprobe  加载内核模块
+* lsmod     查看已加载模块
