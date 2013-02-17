@@ -104,6 +104,21 @@ set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
 set smartcase
 set ic
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
+
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+""""""""""""""""""""""""""""""""""""""""""""""
+""omni completion 
+""""""""""""""""""""""""""""""""""""""""""""""
+set ofu=syntaxcomplete#Complete
+imap <silent> ` <C-X><C-O>
+
+call pathogen#infect()
+syntax on
+filetype plugin indent on
