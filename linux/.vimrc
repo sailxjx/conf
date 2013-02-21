@@ -116,8 +116,8 @@ let Tlist_Exit_OnlyWindow=1
 """"""""""""""""""""""""""""""""""""""""""""""
 ""omni completion 
 """"""""""""""""""""""""""""""""""""""""""""""
-set ofu=syntaxcomplete#Complete
-imap <silent> ` <C-X><C-O>
+" set ofu=syntaxcomplete#Complete
+" imap <silent> ` <C-X><C-O>
 
 call pathogen#infect()
 syntax on
