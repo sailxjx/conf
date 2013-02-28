@@ -3,6 +3,18 @@
 * `<=>` 1<=>0=1, 1<=>1=0, 1<=>2=-1
 * `===` (1..10) === 5 is true, 5 lies in range 1 to 10
 
+###yield:
+```
+def block_test
+  puts "We're in the method!"
+  puts "Yielding to the block..."
+  yield
+  puts "We're back in the method!"
+end
+
+block_test { puts ">>> We're in the block!" }
+```
+
 ###Procs: 
 ```
 group_1 = [4.1, 5.5, 3.2, 3.3, 6.1, 3.9, 4.7]
@@ -16,4 +28,33 @@ end
 can_ride_1 = group_1.select(&over_4_feet)
 can_ride_2 = group_2.select(&over_4_feet)
 can_ride_3 = group_3.select(&over_4_feet) #这里select和()之间不能有空格
+```
+
+###lambda:
+```
+strings = ["leonardo", "donatello", "raphael", "michaelangelo"]
+symbolize = lambda { |x| x.to_sym }
+symbols = strings.collect(&symbolize)
+```
+
+###类访问权限
+```
+class Person
+  attr_reader :name #可读成员变量
+  attr_writer :id #可写成员变量
+  attr_accessor :job #可读写成员变量
+  
+  def initialize(name, job, id)
+    @name = name
+    @job = job
+    @id = id
+  end
+end
+```
+
+###require,include,extend
+```
+require 'module' # call Module::func 引入Module模块
+include Module  # call func 包含Module作用域中所有方法，省点事儿~
+extend Module   # 将Module中的方法作为class的成员
 ```

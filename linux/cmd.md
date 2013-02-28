@@ -111,3 +111,5 @@
 
 * modprobe  加载内核模块
 * lsmod     查看已加载模块
+* ldd       查看共享资源库so和lib
+* xargs     链接文件名  find . -name 'config.php' | xargs grep 'REDIS'
