@@ -29,3 +29,21 @@ a[::2] = "hlo"
 a[::-1] = "olleh"
 a[1:-1] = "ell"
 ```
+###字符串操作
+```
+"*" * 4 == "****"
+```
+###list comprehension(列表推导式)
+`evens_to_50 = [i for i in range(51) if i % 2 == 0]` 返回0到50之间的所有偶数
+
+###lambda
+```
+squares = [i ** 2 for i in range(1,11)]
+print filter(lambda x: 30 < x < 70, squares)
+```
+###super
+```
+class PartTimeEmployee(Employee):
+    def full_time_wage(self, hours):
+        return super(PartTimeEmployee, self).calculate_wage(hours) # super(ClassName, self).method(params)
+```

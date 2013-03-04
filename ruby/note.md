@@ -58,3 +58,9 @@ require 'module' # call Module::func 引入Module模块
 include Module  # call func 包含Module作用域中所有方法，省点事儿~
 extend Module   # 将Module中的方法作为class的成员
 ```
+
+###grep
+`''.methods.grep /^up/ => [:upto, :upcase, :upcase!]` 捕获所有up开头的String内置方法
+
+###instance_methods
+`Class.instance_methods false` 显示Class对象的实例方法，false参数是显示Class本身的方法，而非从superclass中继承的方法，而instance_methods相对于methods的区别是实例化后仍然具有的方法
