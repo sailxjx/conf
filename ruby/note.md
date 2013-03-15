@@ -64,3 +64,17 @@ extend Module   # 将Module中的方法作为class的成员
 
 ###instance_methods
 `Class.instance_methods false` 显示Class对象的实例方法，false参数是显示Class本身的方法，而非从superclass中继承的方法，而instance_methods相对于methods的区别是实例化后仍然具有的方法
+
+###.class
+* "fasdf".class  => String
+* 10.1.class => Float
+
+###创建白板类
+```
+class BlankSlate
+  instance_methods.each do |m|
+    undef_method m unless m.to_s =~ /^__send__|__id__|object_id$/
+  end
+end
+puts BlankSlate.instance_methods
+```

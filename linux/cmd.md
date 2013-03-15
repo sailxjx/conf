@@ -66,6 +66,7 @@
 ###### sort
 * sort -n #数字排序
 * e.g. du -a|sort -n
+* sort -nk2 chars.dic #按第二列排序
 
 ###### 修改默认shell
 * chsh -s /bin/zsh
@@ -113,3 +114,6 @@
 * lsmod     查看已加载模块
 * ldd       查看共享资源库so和lib
 * xargs     链接文件名  find . -name 'config.php' | xargs grep 'REDIS'
+
+######删除文件中的\r换行
+tr -d '\r' < units.dic > units.dic.c

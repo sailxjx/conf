@@ -14,3 +14,5 @@
     3.Git 1.7.2后 –orphan
     git checkout --orphan newbranch
     git rm -rf .
+创建分支并且立刻切换到新分支
+    git checkout -b newbranch
