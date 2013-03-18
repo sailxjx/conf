@@ -117,3 +117,7 @@
 
 ######删除文件中的\r换行
 tr -d '\r' < units.dic > units.dic.c
+
+######分割大文件
+split -b 100m mailserver.log maillog/
+分割为按字母排序的文件
