@@ -47,3 +47,13 @@ class PartTimeEmployee(Employee):
     def full_time_wage(self, hours):
         return super(PartTimeEmployee, self).calculate_wage(hours) # super(ClassName, self).method(params)
 ```
+
+###指定编码
+```
+# -*- coding:utf-8 -*-
+```
+
+###判断包含
+a = 'abcd'
+'a' in a
+=> True

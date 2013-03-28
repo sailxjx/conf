@@ -15,6 +15,8 @@ end
 block_test { puts ">>> We're in the block!" }
 ```
 
+yield x if block_given?  # 非必要条件
+
 ###Procs: 
 ```
 group_1 = [4.1, 5.5, 3.2, 3.3, 6.1, 3.9, 4.7]
@@ -78,3 +80,8 @@ class BlankSlate
 end
 puts BlankSlate.instance_methods
 ```
+
+###判断包含
+a = 'abcd'
+a.include?('a')
+=> true
