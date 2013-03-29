@@ -10,3 +10,11 @@
 
 ## innodb每个表一个idb文件
 * my.cnf中加innodb_file_per_table
+
+##创建用户并赋予权限
+CREATE USER 'rails'@'%' IDENTIFIED BY 'rails';
+grant all privileges on *.* to rails@`%` identified by `rails`;
+
+##修改密码
+update user set password = password("rails") where user = "rails";
+flush privileges;  ##刷新权限表

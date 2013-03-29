@@ -107,6 +107,7 @@
 * zip解压 unzip verify.zip
 
 * grep -P 使用perl正则
+* grep -n 输出行号
 
 * top -bn1 |grep node  #抓取所有node进程
 
@@ -121,3 +122,6 @@ tr -d '\r' < units.dic > units.dic.c
 ######分割大文件
 split -b 100m mailserver.log maillog/
 分割为按字母排序的文件
+
+######查看端口号
+lsof -i :3000
