@@ -85,3 +85,8 @@ puts BlankSlate.instance_methods
 a = 'abcd'
 a.include?('a')
 => true
+
+###File
+当前文件相对路径: __FILE__
+当前文件绝对路径: File.expand_path(__FILE__)
+当前文件夹相对路径: File.dirname(__FILE__)
