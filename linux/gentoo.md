@@ -6,3 +6,5 @@ mount -o bind /dev /mnt/gentoo/dev
 emerge XXX
 emerge -C XXX  #卸载
 equery d XXX  #查看哪些软件依赖XXX
+
+修改欢迎词 /etc/motd

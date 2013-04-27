@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Gollum init script
+GOLLUM_BASE=/home/tristan/coding/wiki_notes
+GOLLUM_USER=tristan
+GOLLUM_PID_FILE=/var/run/gollum/gollum.pid
+GOLLUM_LOG_FILE=/var/log/gollum/gollum.log
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting Gollum"
+    start-stop-daemon --start                   \
+        --chdir "${GOLLUM_BASE}"                \
+        --user "${GOLLUM_USER}"                 \
+        -m -p "${GOLLUM_PID_FILE}"              \
+        -1 "${GOLLUM_LOG_FILE}"                 \
+        -b --exec gollum
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping Gollum"
+    start-stop-daemon --stop                    \
+        --chdir "${GOLLUM_BASE}"                \
+        --user  "${GOLLUM_USER}"                \
+        -p "${GOLLUM_PID_FILE}"                 \
+    eend $?
+}

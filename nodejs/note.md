@@ -13,6 +13,9 @@ a.concat([1,2,3])
 Array.prototype.clone = ()->
     return [].concat(this)
 
+#对象的深拷贝
+b = JSON.parse(JSON.stringify(a))
+
 #类型检测
 typeof(1)
 => number
@@ -22,3 +25,9 @@ typeof([])
 #substr与substring的区别
 substr(index1, length)
 substring(index1, index2)
+
+#类型转化
+a = 'a'
+String(a)   => 'a'
+Array(a)    => ['a']
+Object(a)   => { 0 : 'a' }
