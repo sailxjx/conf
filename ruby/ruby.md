@@ -41,6 +41,11 @@ symbolize = lambda { |x| x.to_sym }
 symbols = strings.collect(&symbolize)
 ```
 
+###`<<`
+连接字符串：
+'Hello ' << 'World'
+=> "Hello World"
+
 简洁lambda:
 ```
 callable = ->(x) { x + 1 }
@@ -168,3 +173,7 @@ irb配置文件
 * %q() is another way to write a single-quoted string (and can be multi-line, which is useful)
 * %Q() gives a double-quoted string
 * %x() is a shell command
+
+###生成`md5`或`sha1`
+* Digest::MD5.hexdigest('string')
+* Digest::SHA1.hexdigest('string')

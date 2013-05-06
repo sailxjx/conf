@@ -31,3 +31,9 @@ a = 'a'
 String(a)   => 'a'
 Array(a)    => ['a']
 Object(a)   => { 0 : 'a' }
+
+#window.onload
+window.onload表示所有dom元素下载结束，假如其中某个静态文件block了，那么这个时间可能会很久
+
+#$(document).ready()
+$(document).ready()在html下载结束后就触发，响应较快

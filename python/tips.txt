@@ -1,3 +1,0 @@
-安装wsgi遇见jk conn_rec' has no member named 'remote_ip的解决方法  
-mod_wsgi.c文件自己改一下，把remote_ip和remote_addr分别替换成client_ip和client_addr，哪一行报错就替换哪一行。
-

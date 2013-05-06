@@ -89,3 +89,21 @@ end
 
 ##validates_with
 [validates_with](http://guides.rubyonrails.org/active_record_validations_callbacks.html#validates_with)
+
+##with_options
+```
+with_options :if => :is_admin? do |admin|
+    admin.validates :url, :length => { :minimum => 10 }
+    admin.validates :content, :presence => true
+  end
+  def initialize
+    super
+    @admin = false
+  end
+  def is_admin?
+    @admin
+  end
+  def set_admin(b)
+    @admin = b
+  end
+```
