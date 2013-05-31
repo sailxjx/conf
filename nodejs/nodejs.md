@@ -37,3 +37,33 @@ window.onload表示所有dom元素下载结束，假如其中某个静态文件b
 
 #$(document).ready()
 $(document).ready()在html下载结束后就触发，响应较快
+
+#实现补0,strpad
+var a = ('000000' + 'a').substr(-6);
+
+#regex,正则表达式
+```
+var a = '2013-05-07-mysql-btree-yu-hash-suo-yin-bi-jiao.markdown'
+var reg = /^\d{4}\-\d{2}\-\d{2}\-(.*)?.markdown$/
+var b = a.match(reg)
+```
+
+#读取文件
+```
+var fs = require('fs');
+var d = '/Users/tristan/coding/blog/source/_posts/2013-04-28-zai-mac-zhong-an-zhuang-wine.markdown';
+fs.createReadStream(d).addListener("data", function(chunk) {
+      console.log(chunk.toString());
+});
+```
+
+#MD5
+crypto.createHash(type).update(str, 'utf8').digest('hex');
+
+#获取当前执行目录
+fs.realpathSync('.')
+
+#encode html实体
+$("<div/>").text('<table>&</table>').html();
+#decode html实体
+$("<div/>").html('<table>&</table>').text();

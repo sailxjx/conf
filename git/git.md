@@ -16,3 +16,12 @@
     git rm -rf .
 创建分支并且立刻切换到新分支
     git checkout -b newbranch
+从远程clone一个特定分支
+    git clone git@github.com:sailxjx/blog.git --single-branch -b gh-pages _deploy
+
+恢复到以前的版本
+    git reset <version>
+回滚
+    git revert <version>
+查看完整log，包括被reset和revert的
+    git log -g

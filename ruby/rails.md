@@ -14,8 +14,9 @@ model关联
 `rake db:schema:dump` 将数据库结构导入db/schema.rb
 `rake db:structure:dump` 将完整数据库导入到db/structure.sql
 
-#init
+#generate
 rails generate controller home index
+rails g model ad_atom url:string content:text
 
 * 不要忘了删除默认首页`rm public/index.html`,
 * 在config/routes.rb中添加`get "home/index"`,
@@ -107,3 +108,43 @@ with_options :if => :is_admin? do |admin|
     @admin = b
   end
 ```
+
+##available callbacks (hooks)
+* before_validation
+* after_validation
+* before_save
+* around_save
+* before_create
+* around_create
+* after_create
+* after_save
+* before_destroy
+* around_destroy
+* after_destroy
+
+##用after_initialize callback来取代替换initialize方法
+```
+  after_initialize do |ad_atoms|
+    puts "initialized an object"
+    puts ad_atoms
+    @admin = false
+  end
+```
+
+#ActiveRecord::Base
+## find
+* Model.find 1  => id=1
+* Model.find :first  => first record
+* Model.find :all  => all records
+## where
+* AdAtoms.where(["url=? or isnull(content)",'http://www.google.com/']).find_all
+
+##model中获取内置字段
+```
+  def get_url
+    url
+  end
+```
+
+##去掉奇葩的复数表名功能
+ActiveRecord::Base.pluralize_table_names = false

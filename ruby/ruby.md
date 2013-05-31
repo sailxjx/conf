@@ -177,3 +177,62 @@ irb配置文件
 ###生成`md5`或`sha1`
 * Digest::MD5.hexdigest('string')
 * Digest::SHA1.hexdigest('string')
+
+###send
+object.send :method, :param
+
+###获取instance_varibles
+some_object.instance_variable_get :@#{name}
+
+###self的用法
+```
+class TestClass
+  # bad
+  def TestClass.some_method
+    # body omitted
+  end
+
+  # good
+  def self.some_other_method
+    # body omitted
+  end
+
+  # Also possible and convenient when you
+  # have to define many singleton methods.
+  class << self
+    def first_method
+      # body omitted
+    end
+
+    def second_method_etc
+      # body omitted
+    end
+  end
+end
+```
+
+###match或grep的奇葩用法
+```
+a = 'string'
+first = a[/str(.*)/, 1]
+=> 'ing'
+zero = a[/str(.*)/, 0]
+=> 'str
+```
+###一些正则表达式
+当无需引用分组内容时, 应该使用(?:RE)代替(RE). (会提高性能)
+```
+/(first|second)/   # bad
+/(?:first|second)/ # good
+
+/str(?<meaningful_var>.*)/ =~ 'string'
+meaningful_var
+=> ing
+```
+
+###字符串
+```
+name = 'alice'
+%(<tr><td class="name">#{name}</td>)
+=> "<tr><td class=\"name\">alice</td>"
+```
