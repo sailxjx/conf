@@ -125,3 +125,7 @@ split -b 100m mailserver.log maillog/
 
 ######查看端口号
 lsof -i :3000
+
+##本地shell在远程执行
+ssh root@MachineB 'bash -s' < local_script.sh
+ssh root@192.168.100.87 'bash -s hello' < echo.sh  # 加参数
