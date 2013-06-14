@@ -67,3 +67,7 @@ fs.realpathSync('.')
 $("<div/>").text('<table>&</table>').html();
 #decode html实体
 $("<div/>").html('<table>&</table>').text();
+
+#object的迭代
+ECMAScript 5中定义
+Object.keys(obj) -> arrkey

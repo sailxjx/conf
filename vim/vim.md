@@ -9,6 +9,7 @@ ctrl+] ctrl+t ctag跳转，跳回
 :e . 浏览当前文件夹
 dw 删除光标后单词
 diw 删除当前单词
+替换： :%s/origin/replace/g
 下一行行首：+
 上一行行首：-
 当前行行首：0 
