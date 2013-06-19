@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Distributed under the terms of the GNU General Public License v2
+
+MONGO_HOME=/usr/local/mongo
+MONGO_USER=tristan
+MONGO_PID_FILE=/var/run/mongo/mongo.pid
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting Mongodb"
+    start-stop-daemon --start       \
+        --chdir  "${MONGO_HOME}"    \
+        --user "${MONGO_USER}"      \
+        -m -p "${MONGO_PID_FILE}"   \
+        -b --exec "${MONGO_HOME}/bin/mongod" -- --config=/etc/mongodb.conf
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping Mongodb"
+    start-stop-daemon --stop        \
+        --chdir "${MONGO_HOME}"     \
+        --user "${MONGO_USER}"      \
+        -p "${MONGO_PID_FILE}"      \
+    eend $?
+}
