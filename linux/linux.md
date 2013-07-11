@@ -1,7 +1,7 @@
 ###### ch*
 * `chmod` 文件权限
     +X 只有当文件为目录文件，或者其他类型的用户有可执行权限时，才将文件权限设置可执行
-    [Chmod](http://zh.wikipedia.org/wiki/Chmod) 
+    [Chmod](http://zh.wikipedia.org/wiki/Chmod)
 * `chgrp` 文件用户组
 * `chown` 文件用户
 
@@ -25,13 +25,13 @@
 * 查看文件
 
 ###### echo -e
-* echo中让转义符生效 
+* echo中让转义符生效
 
 ###### ldconfig
-* 配置动态链接库so 
+* 配置动态链接库so
 
 ###### service
-* service mysql stop|start|restart 
+* service mysql stop|start|restart
 
 ###### nslookup
 * nslookup www.google.com 查看域名信息
@@ -60,7 +60,7 @@
 ###### whois
 * 查看域名信息
 
-###### 下载整站 
+###### 下载整站
 * wget --restrict-file-name=ascii -m -c -nv -np -k -E -p -R=exe,zip http://www.xxx.com
 
 ###### sort
@@ -129,3 +129,6 @@ lsof -i :3000
 ##本地shell在远程执行
 ssh root@MachineB 'bash -s' < local_script.sh
 ssh root@192.168.100.87 'bash -s hello' < echo.sh  # 加参数
+
+##--用于分割标志和直接参数
+mkdir -p -- -p

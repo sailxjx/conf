@@ -6,3 +6,5 @@
 launchctl -w load xxx.plist
 ## 修改默认shell
 chsh -s /bin/zsh
+
+截屏：command + shift + 3
