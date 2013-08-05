@@ -71,3 +71,6 @@ $("<div/>").html('<table>&</table>').text();
 #object的迭代
 ECMAScript 5中定义
 Object.keys(obj) -> arrkey
+
+#四舍五入，round
+Number((1/200).toFixed(2))
