@@ -6,3 +6,6 @@ db.auth('root', 'root')
 ## 数据表用户
 use test
 db.addUser("tristan", "123456")
+## 日志
+db.setProfilingLevel(2)
+db.system.profile.find()

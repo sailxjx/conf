@@ -25,3 +25,6 @@
     git revert <version>
 查看完整log，包括被reset和revert的
     git log -g
+
+删除远程已不存在的分支
+    git fetch --prune

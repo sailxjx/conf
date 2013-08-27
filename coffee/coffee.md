@@ -5,3 +5,5 @@
 object是对象时，`for key, value of object`可以同时得到key与value
 
 `::`可被用来得到对象的prototype属性，`Array::map == Array.prototype.map`
+
+{exec} = require('child_process')  ==>  exec = require('child_process').exec

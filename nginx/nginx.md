@@ -5,3 +5,11 @@ nginx中的if不支持嵌套和&&或||
 location = /favicon.ico {
     try_files /path/to/favicon =404;
 }
+
+## redirect
+server {
+        listen *:80;
+        server_name tb.com;
+        return 302 $scheme://www.tb.com$request_uri;
+}
+
