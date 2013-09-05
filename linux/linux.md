@@ -132,3 +132,9 @@ ssh root@192.168.100.87 'bash -s hello' < echo.sh  # 加参数
 
 ##--用于分割标志和直接参数
 mkdir -p -- -p
+
+## 硬盘测速
+写
+dd if=/dev/zero of=/tmp/output.img bs=8k count=256k
+读
+dd if=/Volumes/Camera\ Card/output.img of=/dev/null bs=64k 
