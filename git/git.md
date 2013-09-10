@@ -28,3 +28,6 @@
 
 删除远程已不存在的分支
     git fetch --prune
+
+查看修改行数
+    git diff e236024 HEAD --shortstat
