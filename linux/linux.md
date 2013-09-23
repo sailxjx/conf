@@ -137,4 +137,7 @@ mkdir -p -- -p
 写
 dd if=/dev/zero of=/tmp/output.img bs=8k count=256k
 读
-dd if=/Volumes/Camera\ Card/output.img of=/dev/null bs=64k 
+dd if=/Volumes/Camera\ Card/output.img of=/dev/null bs=64k
+
+## ldconfig
+配置动态库文件
