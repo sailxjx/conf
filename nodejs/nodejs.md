@@ -74,3 +74,5 @@ Object.keys(obj) -> arrkey
 
 #四舍五入，round
 Number((1/200).toFixed(2))
+
+#defineProperty
