@@ -76,3 +76,11 @@ Object.keys(obj) -> arrkey
 Number((1/200).toFixed(2))
 
 #defineProperty
+
+#callee
+获取自身方法
+foo = -> console.log arguments.callee
+
+==> function () {
+      return console.log(arguments.callee.toString());
+    }
