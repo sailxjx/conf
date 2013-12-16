@@ -31,3 +31,6 @@
 
 查看修改行数
     git diff e236024 HEAD --shortstat
+
+查看总commit数
+    git rev-list HEAD --count
