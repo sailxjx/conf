@@ -11,4 +11,9 @@ for i in `seq 10`; do; echo $i; done;
 cat <<EOF!!
 echo 1
 EOF!!
-ls
+
+### 默认值
+PORT=${1:-$default}
+
+### 截取字符串最后一个字符
+echo ${STRING:$((${#STRING} - 1)):1}

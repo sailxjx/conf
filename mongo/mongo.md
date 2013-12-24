@@ -9,3 +9,5 @@ db.addUser("tristan", "123456")
 ## 日志
 db.setProfilingLevel(2)
 db.system.profile.find()
+## 分析
+db.tasks.find().explain()

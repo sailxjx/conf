@@ -8,3 +8,7 @@ launchctl -w load xxx.plist
 chsh -s /bin/zsh
 
 截屏：command + shift + 3
+
+## nginx.plist
+/System/Library/LaunchDaemons/nginx.plist
+$ launchctl load -F /System/Library/LaunchDaemons/redis.plist
