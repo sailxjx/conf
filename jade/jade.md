@@ -1,0 +1,2 @@
+| !{html} <-- Escaped
+| #{html} <-- Encoded
