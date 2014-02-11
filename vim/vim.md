@@ -28,6 +28,6 @@ diw 删除当前单词
 
 统计字数: g+ctrl+G
 
-
+:w !sudo tee %
 
 http://my.opera.com/jlake/blog/show.dml/479881
