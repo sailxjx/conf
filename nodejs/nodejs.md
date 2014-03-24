@@ -84,3 +84,6 @@ foo = -> console.log arguments.callee
 ==> function () {
       return console.log(arguments.callee.toString());
     }
+
+#进制转换
+parseInt('ddb93440', 32) ==> 461013880960
