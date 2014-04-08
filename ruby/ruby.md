@@ -17,7 +17,7 @@ block_test { puts ">>> We're in the block!" }
 
 yield x if block_given?  # 非必要条件
 
-###Procs: 
+###Procs:
 Proc.new {"xxx"} == proc {"xxx"}
 
 ```
@@ -27,7 +27,7 @@ group_3 = [5.5, 5.1, 3.9, 4.3, 4.9, 3.2, 3.2]
 
 over_4_feet = Proc.new do |height|
     height >= 4
-end 
+end
 
 can_ride_1 = group_1.select(&over_4_feet)
 can_ride_2 = group_2.select(&over_4_feet)
@@ -58,7 +58,7 @@ class Person
   attr_reader :name #可读成员变量
   attr_writer :id #可写成员变量
   attr_accessor :job #可读写成员变量
-  
+
   def initialize(name, job, id)
     @name = name
     @job = job
@@ -236,3 +236,7 @@ name = 'alice'
 %(<tr><td class="name">#{name}</td>)
 => "<tr><td class=\"name\">alice</td>"
 ```
+###安装扩展
+cd ext/...
+ruby extconf.rb
+make && make install

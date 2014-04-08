@@ -5,3 +5,18 @@
     gem install gollum-2.1.4.gem
 
 [gem开发手册](https://github.com/radar/guides/blob/master/gem-development.md)
+
+gem sources -a http://ruby.taobao.org/
+
+.gemrc
+
+```
+---
+:backtrace: false
+:bulk_threshold: 1000
+:sources:
+- http://ruby.taobao.org/
+:update_sources: true
+:verbose: true
+gem: --no-rdoc --no-ri --no-document
+```
