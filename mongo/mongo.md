@@ -11,3 +11,10 @@ db.setProfilingLevel(2)
 db.system.profile.find()
 ## 分析
 db.tasks.find().explain()
+
+## 加载其他js脚本
+load('node_modules/async/lib/async.js')
+
+## ~/.mongorc.js
+var EDITOR='vim';  # Set vim as the default editor
+DBQuery.prototype._prettyShell = true;  # Set pretty as the default
