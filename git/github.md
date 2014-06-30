@@ -1,0 +1,1 @@
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/gulpjs/gulp.png?theme=shields.io)](https://david-dm.org/gulpjs/gulp)

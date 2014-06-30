@@ -17,4 +17,6 @@ load('node_modules/async/lib/async.js')
 
 ## ~/.mongorc.js
 var EDITOR='vim';  # Set vim as the default editor
+function foo() {};
+edit foo;
 DBQuery.prototype._prettyShell = true;  # Set pretty as the default
