@@ -20,3 +20,6 @@ var EDITOR='vim';  # Set vim as the default editor
 function foo() {};
 edit foo;
 DBQuery.prototype._prettyShell = true;  # Set pretty as the default
+
+## 在script中链接其他数据库
+db1 = connect('other.com/otherdb')
