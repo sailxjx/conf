@@ -23,3 +23,8 @@ DBQuery.prototype._prettyShell = true;  # Set pretty as the default
 
 ## 在script中链接其他数据库
 db1 = connect('other.com/otherdb')
+### 在一个连接中切换数据库
+db1 = db.getSiblingDB('teambition');
+
+## mongo shell 手册
+http://docs.mongodb.org/manual/tutorial/write-scripts-for-the-mongo-shell/
