@@ -28,3 +28,6 @@ db1 = db.getSiblingDB('teambition');
 
 ## mongo shell 手册
 http://docs.mongodb.org/manual/tutorial/write-scripts-for-the-mongo-shell/
+
+## 使用环境变量
+在.mongorc.js中设置
