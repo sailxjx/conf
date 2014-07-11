@@ -12,3 +12,6 @@ chsh -s /bin/zsh
 ## nginx.plist
 /System/Library/LaunchDaemons/nginx.plist
 $ launchctl load -F /System/Library/LaunchDaemons/redis.plist
+
+# Homebrew
+`brew link pkg` 自动设置软链接

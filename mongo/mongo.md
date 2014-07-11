@@ -1,3 +1,10 @@
+# 备份数据库
+mongodump --host localhost -d teambition -o /data/backup
+# 恢复数据库
+mongorestore --dbpath /data/mongo /data/backup
+# 停止mongod
+mongod -f /etc/mongodb.conf --shutdown
+
 # 增加用户
 ## 管理员用户
 use admin
@@ -31,3 +38,9 @@ http://docs.mongodb.org/manual/tutorial/write-scripts-for-the-mongo-shell/
 
 ## 使用环境变量
 在.mongorc.js中设置
+
+## 修改profile size
+db.setProfilingLevel(0)
+db.system.profile.drop()
+db.createCollection( "system.profile", { capped: true, size:4000000 } )
+db.setProfilingLevel(1)
