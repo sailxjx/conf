@@ -15,3 +15,20 @@ coffee.emit
 coffee.on 'failure', ->
 coffee.on 'compile', ->
 coffee.on 'success', ->
+
+## 编写自己的stream类
+```coffeescript
+{Writable} = require 'stream'
+
+class ParseStream extends Writable
+
+  write: (chunk) ->
+    @emit 'data', chunk
+    @emitLine chunk
+
+  end: (chunk) ->
+    if chunk?
+      @emit 'data', chunk
+      @emitLine chunk
+    @emit 'end'
+```
