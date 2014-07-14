@@ -8,7 +8,7 @@ object是对象时，`for key, value of object`可以同时得到key与value
 
 {exec} = require('child_process')  ==>  exec = require('child_process').exec
 
-`Object.prototype.toString.call([])` 一种更精准的判断类型的方法
+`toString.call([])` 一种更精准的判断类型的方法
 
 
 coffee.emit
