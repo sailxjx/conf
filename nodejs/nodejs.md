@@ -87,3 +87,4 @@ foo = -> console.log arguments.callee
 
 #进制转换
 parseInt('ddb93440', 32) ==> 461013880960
+461013880960.toString('32') ==> 'ddb93440'
