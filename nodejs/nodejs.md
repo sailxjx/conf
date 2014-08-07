@@ -88,3 +88,8 @@ foo = -> console.log arguments.callee
 #进制转换
 parseInt('ddb93440', 32) ==> 461013880960
 461013880960.toString('32') ==> 'ddb93440'
+
+#多进制数字表示方式
+二进制 0b001
+八进制 0o001
+十六进制  0x001
