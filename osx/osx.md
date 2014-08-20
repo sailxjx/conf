@@ -15,3 +15,7 @@ $ launchctl load -F /System/Library/LaunchDaemons/redis.plist
 
 # Homebrew
 `brew link pkg` 自动设置软链接
+
+# Finder
+defaults write com.apple.finder AppleShowAllFiles Yes && killall Finder //显示隐藏文件
+defaults write com.apple.finder AppleShowAllFiles No && killall Finder //不显示隐藏文件

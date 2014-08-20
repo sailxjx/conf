@@ -18,3 +18,6 @@ grant all privileges on *.* to rails@`%` identified by `rails`;
 ##修改密码
 update user set password = password("rails") where user = "rails";
 flush privileges;  ##刷新权限表
+
+##创建数据库
+CREATE DATABASE IF NOT EXISTS yourdbname DEFAULT CHARSET utf8 COLLATE utf8_general_ci;

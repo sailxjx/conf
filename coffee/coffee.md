@@ -32,3 +32,6 @@ class ParseStream extends Writable
       @emitLine chunk
     @emit 'end'
 ```
+
+## 判断是 require 还是直接执行
+analyser() if require.main is module

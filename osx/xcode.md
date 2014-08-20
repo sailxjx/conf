@@ -1,4 +1,4 @@
-iconutil -c filename.icns filename.iconset
+iconutil -c icns filename.iconset
 
 
 <key>CFBundleName</key>
