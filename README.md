@@ -1,1 +1,1 @@
-some configs
+configuration, cheatsheet and dot file

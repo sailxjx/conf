@@ -8,6 +8,7 @@ launchctl -w load xxx.plist
 chsh -s /bin/zsh
 
 截屏：command + shift + 3
+部分截屏：command + shift + 4
 
 ## nginx.plist
 /System/Library/LaunchDaemons/nginx.plist

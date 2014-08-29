@@ -35,3 +35,15 @@ class ParseStream extends Writable
 
 ## 判断是 require 还是直接执行
 analyser() if require.main is module
+
+## 在 cs 中使用 js
+```
+y = 0;
+test = (x) ->
+  `var y`
+  y = 10
+  x + y;
+
+alert test 5
+alert y
+```
