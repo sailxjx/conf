@@ -146,3 +146,10 @@ dd if=/Volumes/Camera\ Card/output.img of=/dev/null bs=64k
 top       #按照cpu使用率排序     #按内存使用率排序
 On Mac    `o cpu`              `o mem`
 On Linux  `P`                  `M`
+
+## gzip
+
+解压缩 gzip -d somefile.gz
+
+## 修改 hostname
+hostname xxx
