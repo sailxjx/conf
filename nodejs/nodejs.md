@@ -89,6 +89,9 @@ foo = -> console.log arguments.callee
 parseInt('ddb93440', 32) ==> 461013880960
 461013880960.toString('32') ==> 'ddb93440'
 
+#base64
+new Buffer('3755740085282937').toString('base64')
+
 #多进制数字表示方式
 二进制 0b001
 八进制 0o001
