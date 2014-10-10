@@ -153,3 +153,6 @@ On Linux  `P`                  `M`
 
 ## 修改 hostname
 hostname xxx
+
+## dtruss
+system call truss
