@@ -44,3 +44,10 @@ db.setProfilingLevel(0)
 db.system.profile.drop()
 db.createCollection( "system.profile", { capped: true, size:4000000 } )
 db.setProfilingLevel(1)
+
+## 创建 sparse 索引
+db.messages.ensureIndex({team: 1, creator: 1, to: 1, _id: -1}, {background: true, sparse: true})
+
+## 删除索引
+db.messages.dropIndex('room_1')
+db.messages.dropIndex({team: 1})
