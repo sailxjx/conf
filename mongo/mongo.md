@@ -51,3 +51,14 @@ db.messages.ensureIndex({team: 1, creator: 1, to: 1, _id: -1}, {background: true
 ## 删除索引
 db.messages.dropIndex('room_1')
 db.messages.dropIndex({team: 1})
+
+## 查看单个 collection 状态
+db.collection.stats()
+
+## 查看集群状态
+rs.status()
+
+## 执行 script
+mongo <<EOF
+  print("hello world")
+EOF

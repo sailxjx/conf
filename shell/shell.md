@@ -19,3 +19,9 @@ PORT=${1:-$default}
 ### 截取字符串最后一个字符
 echo ${STRING:$((${#STRING} - 1)):1}
 
+# pipe
+echo "hello world" | { read text; echo $text; }
+
+cat <<EOF | { read text; echo $text; }
+  print("hello world")
+EOF

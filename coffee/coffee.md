@@ -51,3 +51,6 @@ alert y
 二进制 0b001
 八进制 0o001
 十六进制  0x001
+
+# 设置 Error 堆栈长度
+Error.stackTraceLimit = Infinity

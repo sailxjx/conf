@@ -156,3 +156,6 @@ hostname xxx
 
 ## dtruss
 system call truss
+
+## 后台/执行/前台
+ctrl + z / bg / fg
