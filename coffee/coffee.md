@@ -54,3 +54,6 @@ alert y
 
 # 设置 Error 堆栈长度
 Error.stackTraceLimit = Infinity
+
+# 连接 buffer
+Buffer.concat [buf1, buf2]
