@@ -57,3 +57,6 @@ Error.stackTraceLimit = Infinity
 
 # 连接 buffer
 Buffer.concat [buf1, buf2]
+
+# 取得临时文件夹地址
+os.tmpdir()
