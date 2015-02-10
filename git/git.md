@@ -34,3 +34,9 @@
 
 查看总commit数
     git rev-list HEAD --count
+
+删除指定的 tag
+    git tag | grep -v v1.13 | grep -v v1.14 | xargs git tag -d
+
+删除远程 tag
+    git push --tags --prune

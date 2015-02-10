@@ -159,3 +159,6 @@ system call truss
 
 ## 后台/执行/前台
 ctrl + z / bg / fg
+
+## 找到所有非二进制文件
+find . -type f -exec grep -Il "" {} \;
