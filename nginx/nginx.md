@@ -13,3 +13,6 @@ server {
         return 302 $scheme://www.tb.com$request_uri;
 }
 
+### turn off 304
+if_modified_since off
+http://wiki.nginx.org/NginxHttpCoreModule#if_modified_since
