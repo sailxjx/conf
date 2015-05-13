@@ -25,3 +25,12 @@ echo "hello world" | { read text; echo $text; }
 cat <<EOF | { read text; echo $text; }
   print("hello world")
 EOF
+
+# echo to stderr
+>&2 echo "error"
+
+# cut string
+git show-ref HEAD | cut -d ' ' -f1
+
+# compare two line of git ref
+git show-ref master | cut -d ' ' -f1 | uniq | wc -l | tr -d '[[:space:]]'

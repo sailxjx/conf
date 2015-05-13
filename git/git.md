@@ -40,3 +40,6 @@
 
 删除远程 tag
     git push --tags --prune
+
+查看 commit hash
+    git rev-list v2.0.0-rc1 | head -n 1
