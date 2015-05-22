@@ -91,3 +91,7 @@ parseInt('ddb93440', 32) ==> 461013880960
 
 #base64
 new Buffer('3755740085282937').toString('base64')
+
+# exec 与 spawn 的区别
+spawn 的 buffer 可以超过 200k
+exec 在超出 buffer 限制时会发送 SIGTERM 退出子程序
