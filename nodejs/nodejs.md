@@ -95,3 +95,7 @@ new Buffer('3755740085282937').toString('base64')
 # exec 与 spawn 的区别
 spawn 的 buffer 可以超过 200k
 exec 在超出 buffer 限制时会发送 SIGTERM 退出子程序
+
+# spawn
+[options.stdio](https://nodejs.org/api/child_process.html#child_process_options_stdio)
+less = spawn 'less', ['./index.html'], stdio: 'inherit'

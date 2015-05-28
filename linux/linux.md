@@ -162,3 +162,7 @@ ctrl + z / bg / fg
 
 ## 找到所有非二进制文件
 find . -type f -exec grep -Il "" {} \;
+
+## 查看文件修改时间戳
+OSX: stat -f "%m" .
+LINUX: stat --printf='%Y\n' .
