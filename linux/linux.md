@@ -166,3 +166,6 @@ find . -type f -exec grep -Il "" {} \;
 ## 查看文件修改时间戳
 OSX: stat -f "%m" .
 LINUX: stat --printf='%Y\n' .
+
+## 按文件大小排序
+find . -name '*coffee' | xargs stat -f '%z %N' | sort -n
