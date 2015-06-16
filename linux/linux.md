@@ -169,3 +169,8 @@ LINUX: stat --printf='%Y\n' .
 
 ## 按文件大小排序
 find . -name '*coffee' | xargs stat -f '%z %N' | sort -n
+
+## 结束所有当前 session 下任务
+kill `jobs -p`
+
+jobs -x kill
