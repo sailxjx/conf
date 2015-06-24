@@ -80,7 +80,7 @@
 ## pkill -u tristan
 * 剔除用户
 
-## ctrl+z, fg, bg, jobs
+## ctrl+Z, fg, bg, jobs
 * 后台暂停，恢复前台运行，后台继续执行，查看后台进程
 
 * cd -
