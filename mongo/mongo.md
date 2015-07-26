@@ -66,3 +66,5 @@ rs.status()
 mongo <<EOF
   print("hello world")
 EOF
+
+mongoexport --host=192.168.0.21 --port=27017 -u root -p root --authenticationDatabase=admin -f name,email,emailDomain,globalRole,createdAt,sourceId -d talksync -c users --type=csv -o talk_user.csv
