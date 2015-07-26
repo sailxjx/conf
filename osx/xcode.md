@@ -6,3 +6,5 @@ iconutil -c icns filename.iconset
 
 # 添加语言
 PROJECT -> Localizations -> Add
+
+ctrl + i  # 自动格式化代码
