@@ -1,4 +1,4 @@
 commit:
-	git add --all && git commit -am "updated at `date`" && git push
+	git add --all && git commit -am "更新于`date`" && git push
 
 .PHONY: commit
