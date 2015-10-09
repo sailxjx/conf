@@ -68,3 +68,6 @@ mongo <<EOF
 EOF
 
 mongoexport --host=192.168.0.21 --port=27017 -u root -p root --authenticationDatabase=admin -f name,email,emailDomain,globalRole,createdAt,sourceId -d talksync -c users --type=csv -o talk_user.csv
+
+## 创建一个有限集
+db.createCollection("logs", { capped : true, size : 5242880, max : 1000 } )
