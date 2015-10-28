@@ -2,6 +2,8 @@
     git submodule add git@github.com:51fanli/sysd.git sysd
 更新子模块
     git submodule update
+更新子模块
+    git submodule update --rebase --remote
 创建新的空分支
     三种方法
     1.
