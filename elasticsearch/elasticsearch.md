@@ -20,3 +20,12 @@ sudo plugin --url https://raw.githubusercontent.com/medcl/elasticsearch-rtf/mast
 - query_string 支持 [lucene query syntax](http://www.lucenetutorial.com/lucene-query-syntax.html), and, or 等等
 - match 匹配单词
 - match_phrase 匹配整句，顺序相关
+
+# 重建索引神器
+https://github.com/codelibs/elasticsearch-reindexing
+
+# scan and scoll
+
+http://#{host}:9200/talk_messages_v2/_search?scroll=1m&search_type=scan&size=100
+
+http://#{host}:9200/_search/scroll?scroll=1m&scroll_id=#{scrollId}
