@@ -71,3 +71,11 @@ mongoexport --host=192.168.0.21 --port=27017 -u root -p root --authenticationDat
 
 ## 创建一个有限集
 db.createCollection("logs", { capped : true, size : 5242880, max : 1000 } )
+
+## 查看真实使用的索引 executionStats
+db.messages.find({team: ObjectId('5388200cb269e7f04e0842b8'), tags: {$ne: [], $exists: 1}}).explain("executionStats")
+
+## $ne $exists 导致索引无效
+
+## ttl 索引
+https://docs.mongodb.org/manual/core/index-ttl/
