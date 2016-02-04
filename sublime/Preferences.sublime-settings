@@ -1,0 +1,17 @@
+{
+	"color_scheme": "Packages/Colorsublime-Themes/IR_Black.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Monaco",
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"jsdocs_align_tags": "shallow",
+	"jsdocs_param_description": false,
+	"jsdocs_return_description": false,
+	"show_full_path": false,
+	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
