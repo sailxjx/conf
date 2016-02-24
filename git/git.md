@@ -45,3 +45,6 @@
 
 查看 commit hash
     git rev-list v2.0.0-rc1 | head -n 1
+
+压缩多个 commit 为一条记录 rebase + squash
+    https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/
