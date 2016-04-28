@@ -19,3 +19,7 @@ func **(base: Double, power: Double) -> Double {
 
 print(2 ** 3)
 ```
+
+# `guard` && `defer`
+
+<http://nshipster.com/guard-and-defer/>

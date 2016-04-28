@@ -9,3 +9,7 @@ unwind segue 方法需要写在跳转目标的 ViewController 内 <http://stacko
 # Constrain to margin
 
 如果想要全屏，不要勾选这项
+
+# 请求 https 链接 ATS 问题
+
+<http://stackoverflow.com/questions/32755674/ios9-getting-error-an-ssl-error-has-occurred-and-a-secure-connection-to-the-ser>
