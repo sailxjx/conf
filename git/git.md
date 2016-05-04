@@ -73,3 +73,7 @@ git rev-list v2.0.0-rc1 | head -n 1
 # 压缩多个 commit 为一条记录 rebase + squash     https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/
 
 # 从所有历史中移除文件     https://help.github.com/articles/removing-files-from-a-repository-s-history/
+
+# 更新从根节点开始的提交记录 git rebase -i --root
+
+# 更新从 HEAD 到之前某次的提交记录 git rebase -i HEAD~10
