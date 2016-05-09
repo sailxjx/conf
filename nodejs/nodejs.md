@@ -99,3 +99,8 @@ exec 在超出 buffer 限制时会发送 SIGTERM 退出子程序
 # spawn
 [options.stdio](https://nodejs.org/api/child_process.html#child_process_options_stdio)
 less = spawn 'less', ['./index.html'], stdio: 'inherit'
+
+# 获得 server 端口号
+listener = app.listen(8888), function(){
+    console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+});

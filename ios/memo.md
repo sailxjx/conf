@@ -13,3 +13,7 @@ unwind segue 方法需要写在跳转目标的 ViewController 内 <http://stacko
 # 请求 https 链接 ATS 问题
 
 <http://stackoverflow.com/questions/32755674/ios9-getting-error-an-ssl-error-has-occurred-and-a-secure-connection-to-the-ser>
+
+# bounds vs frame
+
+<http://stackoverflow.com/questions/8496762/nsviews-bounds-vs-frame>
