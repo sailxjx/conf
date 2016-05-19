@@ -37,3 +37,22 @@ set1.intersect(array2)   // {"a", "b"}
 set1.subtract(array2)    // {"c"}
 set1.exclusiveOr(array2) // {"c", "d"}
 ```
+
+# Inout parameter
+```
+func setValue<T>(inout object:T, key: String) {
+    switch key {
+        case "String":
+            object = ("A String" as? T)!
+        case "Bool":
+            object = (true as? T)!
+        default:
+            print("Unhandled key: \(key)")
+    }
+}
+
+var string = ""
+var bool = false
+setValue(&string, key: "String")
+setValue(&bool, key: "Bool")
+```
