@@ -104,3 +104,10 @@ less = spawn 'less', ['./index.html'], stdio: 'inherit'
 listener = app.listen(8888), function(){
     console.log('Listening on port ' + listener.address().port); //Listening on port 8888
 });
+
+# 替代 __proto__
+Object.setPrototypeOf
+
+```
+Object.setPrototypeOf(Application.prototype, Emitter.prototype);
+```

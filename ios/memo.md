@@ -17,3 +17,7 @@ unwind segue 方法需要写在跳转目标的 ViewController 内 <http://stacko
 # bounds vs frame
 
 <http://stackoverflow.com/questions/8496762/nsviews-bounds-vs-frame>
+
+# 查看 Realm Database 地址
+
+print(Realm.Configuration.defaultConfiguration.fileURL)
