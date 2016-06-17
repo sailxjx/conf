@@ -7,3 +7,7 @@ http://graphicdesign.stackexchange.com/questions/36253/scaling-a-symbol-in-sketc
 # 合并多图层为同一图片 
 
 Flatten selection to bitmap
+
+# Shortcuts
+
+https://medium.com/sketch-app/sketch-keyboard-shortcuts-42c06583ae83
