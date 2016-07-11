@@ -174,3 +174,6 @@ find . -name '*coffee' | xargs stat -f '%z %N' | sort -n
 kill `jobs -p`
 
 jobs -x kill
+
+## 搜索软件包
+apt-cache search openjdk
