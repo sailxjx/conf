@@ -32,3 +32,7 @@ docker run -t -i -d --name ubuntu ubuntu:16.04
 
 # Attach to a running container
 docker exec -it "id of running container" bash
+
+# Copy files
+docker cp foo.txt mycontainer:/foo.txt
+docker cp mycontainer:/foo.txt foo.txt
