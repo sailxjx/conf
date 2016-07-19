@@ -24,6 +24,8 @@ CMD node server.js
 $ docker build -t hello-node ./
 $ docker run -p 8080:8080 -d hello-node
 
+不能使用大写字母作为镜像名称
+
 # Login
 docker login hub.docker.com 
 
@@ -36,3 +38,7 @@ docker exec -it "id of running container" bash
 # Copy files
 docker cp foo.txt mycontainer:/foo.txt
 docker cp mycontainer:/foo.txt foo.txt
+
+# Mount a host directory
+docker run -v /host/directory:/container/directory -other -options image_name command_to_run
+

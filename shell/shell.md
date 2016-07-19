@@ -34,3 +34,12 @@ git show-ref HEAD | cut -d ' ' -f1
 
 # compare two line of git ref
 git show-ref master | cut -d ' ' -f1 | uniq | wc -l | tr -d '[[:space:]]'
+
+## Array
+http://stackoverflow.com/questions/8880603/loop-through-array-of-strings-in-bash-script
+```bash
+ARR=("ABC" "EF  TG")
+for str in "${ARR[@]}"; do
+  # STH.
+done
+```

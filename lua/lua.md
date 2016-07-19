@@ -30,3 +30,27 @@ end
 
 local status = xpcall(add, errHandler, 10, 20)
 ```
+
+# for..in loop
+```lua
+-- Loop number
+for i=10,1,-1 do
+  print(i)
+end
+
+-- Loop array
+local arr = {'aa', 'bb'}
+for i, k in ipairs(arr) do
+  print(i, k)
+end
+
+-- Loop table
+local hashMap = {
+  a = 'aa',
+  b = 'bb'
+}
+
+for i, k in pairs(hashMap) do
+  print(i, k)
+end
+```

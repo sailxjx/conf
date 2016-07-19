@@ -19,6 +19,7 @@
   * [Memo](ios/memo.md)
   * [Swift](ios/swift.md)
 - [Jade](jade/jade.md)
+- [Kubernetes](kubernetes/kubernetes.md)
 - [Linux](linux/linux.md)
   * [Curl](linux/curl.md)
   * [Gentoo](linux/gentoo.md)
