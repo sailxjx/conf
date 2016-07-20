@@ -51,7 +51,7 @@
 - [Ruby](ruby/ruby.md)
   * [Gem](ruby/gem.md)
   * [Rails](ruby/rails.md)
-- [Shell](shell/shell.md)
+- [Shell](shell/note.md)
   * [Colors](shell/colors.md)
 - [Sketch](sketch/sketch.md)
 - [Sublime](sublime/sublime.md)
