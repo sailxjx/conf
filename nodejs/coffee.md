@@ -10,13 +10,13 @@ object是对象时，`for key, value of object`可以同时得到key与value
 
 `toString.call([])` 一种更精准的判断类型的方法
 
-
 coffee.emit
 coffee.on 'failure', ->
 coffee.on 'compile', ->
 coffee.on 'success', ->
 
 ## 编写自己的stream类
+
 ```coffeescript
 {Writable} = require 'stream'
 
@@ -37,7 +37,8 @@ class ParseStream extends Writable
 analyser() if require.main is module
 
 ## 在 cs 中使用 js
-```
+
+```coffeescript
 y = 0;
 test = (x) ->
   `var y`
@@ -47,7 +48,7 @@ test = (x) ->
 alert test 5
 alert y
 ```
-#多进制数字表示方式
+# 多进制数字表示方式
 二进制 0b001
 八进制 0o001
 十六进制  0x001

@@ -36,11 +36,17 @@ git checkout -b newbranch
 
 # 恢复到以前的版本
 
-git reset <version>
+git reset
+
+<version>
+</version>
 
 # 回滚
 
-git revert <version>
+git revert
+
+<version>
+</version>
 
 # 查看完整log，包括被reset和revert的
 
@@ -70,9 +76,9 @@ git push --tags --prune
 
 git rev-list v2.0.0-rc1 | head -n 1
 
-# 压缩多个 commit 为一条记录 rebase + squash     https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/
+# 压缩多个 commit 为一条记录 rebase + squash <https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/>
 
-# 从所有历史中移除文件     https://help.github.com/articles/removing-files-from-a-repository-s-history/
+# 从所有历史中移除文件 <https://help.github.com/articles/removing-files-from-a-repository-s-history/>
 
 # 更新从根节点开始的提交记录 git rebase -i --root
 

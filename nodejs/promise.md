@@ -5,7 +5,7 @@
 
 同时使用 callback 与 promise
 
-```
+```coffeescript
 Promise = require 'bluebird'
 
 foo = (key, callback) ->

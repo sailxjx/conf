@@ -1,9 +1,16 @@
 # Steps to initial sync the data of a river
-# Remove the river
-DELETE /_river/events
-# Remove the type or index
-DELETE  /teambition/events
-# Remapping the type or index
+
+## Remove the river
+
+`DELETE /_river/events`
+
+## Remove the type or index
+
+`DELETE /teambition/events`
+
+## Remapping the type or index
+
+```json
 POST /teambition/events/_mapping
 {
   "properties": {
@@ -24,7 +31,11 @@ POST /teambition/events/_mapping
     }
   }
 }
-# Recreate the river
+```
+
+## Recreate the river
+
+```json
 POST /_river/events/_meta
 {
   "type": "mongodb",
@@ -62,3 +73,4 @@ POST /_river/events/_meta
     "type": "events"
   }
 }
+```

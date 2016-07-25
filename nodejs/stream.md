@@ -1,3 +1,4 @@
+```coffeescript
 feedParser = new FeedParser()
 
 readableStream = new stream.Readable()
@@ -15,3 +16,4 @@ readableStream.push body
 readableStream.push null
 readableStream.on 'end', ->
   resolve feed
+```
