@@ -1,5 +1,5 @@
 
-# Array
+### Array
 http://stackoverflow.com/questions/8880603/loop-through-array-of-strings-in-bash-script
 
 
@@ -20,7 +20,7 @@ done
     EF  TG
 
 
-# Range
+### Range
 
 
 ```bash
@@ -63,7 +63,7 @@ max=10; for in in `seq 0 $max`; do echo $i; done;
     10
 
 
-# EOF
+### EOF
 
 
 ```bash
@@ -75,7 +75,7 @@ EOF
     echo 1
 
 
-# 默认值
+### 默认值
 
 
 ```bash
@@ -87,7 +87,7 @@ echo $PORT
     1024
 
 
-# 截取字符串最后一个字符
+### 截取字符串最后一个字符
 
 
 ```bash
@@ -98,7 +98,7 @@ echo ${STRING:$((${#STRING} - 1)):1}
     E
 
 
-# Pipe
+### Pipe
 
 
 ```bash
@@ -112,7 +112,7 @@ EOF
     hello world
 
 
-# Echo to stderr
+### Echo to stderr
 
 
 ```bash
@@ -122,7 +122,7 @@ EOF
     error
 
 
-# Cut string
+### Cut string
 
 
 ```bash
@@ -132,7 +132,7 @@ echo 4087507e27553beda51103bfc2bacd4ef63411a6 refs/remotes/origin/HEAD | cut -d 
     4087507e27553beda51103bfc2bacd4ef63411a6
 
 
-# Compare two line of git ref
+### Compare two line of git ref
 
 
 ```bash
@@ -140,3 +140,19 @@ git show-ref master | cut -d ' ' -f1 | uniq | wc -l | tr -d '[[:space:]]'
 ```
 
     1
+
+### Pushd/dirs/popd
+
+
+```bash
+echo -e "[Origin dirs stack]        " `dirs`
+echo -e "[Push and enter new dir]   " `pushd ~/coding/conf/ruby`
+echo -e "[New dirs stack]           " `dirs`
+echo -e "[Pop last dir]             " `popd`
+```
+
+    [Origin dirs stack]         ~/coding/conf/ruby ~/coding/conf/linux
+    [Push and enter new dir]    ~/coding/conf/ruby ~/coding/conf/ruby ~/coding/conf/linux
+    [New dirs stack]            ~/coding/conf/ruby ~/coding/conf/linux
+    [Pop last dir]              ~/coding/conf/linux
+
