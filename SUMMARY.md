@@ -14,6 +14,7 @@
   * [Memo](ios/memo.md)
   * [Swift](ios/swift.md)
 - [Jade](jade/jade.md)
+- [Kafka](kafka/note.md)
 - [Kubernetes](kubernetes/kubernetes.md)
   * [Note](kubernetes/note.md)
 - [Linux](linux/linux.md)

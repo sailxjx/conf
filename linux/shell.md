@@ -156,3 +156,15 @@ echo -e "[Pop last dir]             " `popd`
     [New dirs stack]            ~/coding/conf/ruby ~/coding/conf/linux
     [Pop last dir]              ~/coding/conf/linux
 
+
+### 检测到未设置变量时报错并退出程序
+
+
+```bash
+echo $undefined-ok
+# -e 报错时退出，-u 报错处理未设置变量
+set -eu
+echo $undefined-ok
+# 恢复设置
+set +eu
+```
