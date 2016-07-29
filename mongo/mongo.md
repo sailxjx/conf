@@ -3,7 +3,9 @@ mongodump --host localhost -d teambition -o /data/backup
 # 恢复数据库
 mongorestore --dbpath /data/mongo /data/backup
 # 停止mongod
-mongod -f /etc/mongodb.conf --shutdown
+mongo
+> use admin
+> db.shutdownServer()
 
 # 增加用户
 ## 管理员用户

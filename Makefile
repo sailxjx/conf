@@ -6,4 +6,4 @@ commit:
 publish:
 	rm -rf public/* && jupyter-nbconvert --to markdown ./**/*.ipynb && gitbook build . public && cd public && git add --all && git commit -am "Publish" && git push
 
-.PHONY: commit
+.PHONY: commit publish
