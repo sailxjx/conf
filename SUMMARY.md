@@ -1,5 +1,6 @@
 # Configs, cheatsheets and dot files
 
+- [CouchDB](couchdb/note.md)
 - [Css](css/css.md)
 - [Docker](docker/docker.md)
 - [Elasticsearch](elasticsearch/elasticsearch.md)

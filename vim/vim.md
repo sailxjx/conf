@@ -31,3 +31,7 @@ diw 删除当前单词
 :w !sudo tee %
 
 http://my.opera.com/jlake/blog/show.dml/479881
+
+### 删除多行
+删除 5 行
+> 5dd
