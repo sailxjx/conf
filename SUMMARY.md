@@ -43,6 +43,7 @@
 - [Nginx](nginx/nginx.md)
 - [Nodejs](nodejs/nodejs.md)
   * [Coffee](nodejs/coffee.md)
+  * [Note](nodejs/note.md)
   * [Npm](nodejs/npm.md)
   * [Nwjs](nodejs/nwjs.md)
   * [Promise](nodejs/promise.md)
