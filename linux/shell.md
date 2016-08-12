@@ -168,3 +168,15 @@ echo $undefined-ok
 # 恢复设置
 set +eu
 ```
+
+### `trap` 捕获信号并执行命令
+
+
+```bash
+function handle_exit {
+  echo -e "Exit without error."
+  exit
+}
+
+trap "set +x; handle_exit" SIGQUIT SIGTERM SIGINT SIGHUP
+```
