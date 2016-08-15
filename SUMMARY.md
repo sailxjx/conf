@@ -17,6 +17,7 @@
 - [Jade](jade/jade.md)
 - [Java](java/java.md)
   * [Gradle](java/gradle.md)
+  * [Log4j](java/log4j.md)
 - [Kafka](kafka/note.md)
 - [Kubernetes](kubernetes/kubernetes.md)
   * [Note](kubernetes/note.md)

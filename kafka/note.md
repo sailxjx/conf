@@ -43,3 +43,10 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 # Listen to a topic `from beginning`
 ./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic wikipedia-raw --from-beginning
 ```
+
+### Delete a topic
+
+
+```bash
+./bin/kafka-topics --delete --zookeeper localhost:2181 --topic try-test
+```
