@@ -36,3 +36,7 @@ docker cp mycontainer:/foo.txt foo.txt
 # Mount a host directory
 
 `docker run -v /host/directory:/container/directory -other -options image_name command_to_run`
+
+## Tag
+
+`docker tag image_id image_name:tag`

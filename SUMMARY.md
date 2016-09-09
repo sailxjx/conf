@@ -35,6 +35,7 @@
   * [Screen](linux/screen.md)
   * [Sed](linux/sed.md)
   * [Shell](linux/shell.md)
+  * [Tar](linux/tar.md)
 - [Lua](lua/lua.md)
 - [Mongo](mongo/mongo.md)
   * [Limbo](mongo/limbo.md)
