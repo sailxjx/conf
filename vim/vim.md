@@ -17,8 +17,5 @@
 | gg                   | 文件头            |
 | :w !sudo tee %       | 写入              |
 | 5dd                  | 删除多行（5行）   |
-
-## P.S.
-
-> `^` control
-> `cmd` command
+| a                    | 在光标后插入      |
+| viw                  | 选中当前单词      |

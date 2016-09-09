@@ -180,3 +180,14 @@ function handle_exit {
 
 trap "set +x; handle_exit" SIGQUIT SIGTERM SIGINT SIGHUP
 ```
+
+### 设置未定义变量
+
+
+```bash
+: ${VERSION:="2.0"}
+echo $VERSION
+```
+
+    2.0
+
