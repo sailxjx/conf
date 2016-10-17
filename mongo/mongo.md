@@ -82,3 +82,6 @@ db.messages.find({team: ObjectId('5388200cb269e7f04e0842b8'), tags: {$ne: [], $e
 ## ttl 索引
 https://docs.mongodb.org/manual/core/index-ttl/
 db.eventlog.createIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 } )
+
+## 创建 Replica set
+rs.initiate({_id:"rs0", members: [{"_id":1, "host":"127.0.0.1:27017"}]})

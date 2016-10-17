@@ -25,3 +25,9 @@ task taskY << {
 
     taskY
     taskX
+
+### 升级 gradlew 到 3
+
+$ vim gradle/wrapper/gradle-wrapper.properties
+ 
+`distributionUrl=https\://services.gradle.org/distributions/gradle-3.0-all.zip`
