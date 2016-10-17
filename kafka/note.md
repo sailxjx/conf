@@ -10,7 +10,7 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 
 ```bash
-./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 ```
 
     Created topic "test".
@@ -18,7 +18,7 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 
 ```bash
-./bin/kafka-topics.sh --list --zookeeper localhost:2181
+./bin/kafka-topics --list --zookeeper localhost:2181
 ```
 
     __samza_coordinator_wikipedia-feed_1
@@ -31,7 +31,7 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 
 ```bash
-./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+./bin/kafka-console-producer --broker-list localhost:9092 --topic test
 ```
 
     
@@ -41,7 +41,7 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 ```bash
 # Listen to a topic `from beginning`
-./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic wikipedia-raw --from-beginning
+./bin/kafka-console-consumer  --zookeeper localhost:2181 --topic wikipedia-raw --from-beginning
 ```
 
 ### Delete a topic
