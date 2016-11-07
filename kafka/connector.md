@@ -75,8 +75,3 @@ curl -X PUT -H "Content-Type: application/json" http://localhost:8083/connectors
 ```
 
     {"name":"mongo-source-local-test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"1","host":"127.0.0.1","port":"27017","batch.size":"100","schema.name":"mongoschema","topic.prefix":"mongo","databases":"test.users","name":"mongo-source-local-test"},"tasks":[]}
-
-
-```bash
-
-```
