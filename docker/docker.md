@@ -40,3 +40,7 @@ docker cp mycontainer:/foo.txt foo.txt
 ## Tag
 
 `docker tag image_id image_name:tag`
+
+## Environment
+
+`docker run -e "A=B" -d image`
