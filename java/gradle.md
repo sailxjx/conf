@@ -31,3 +31,6 @@ task taskY << {
 $ vim gradle/wrapper/gradle-wrapper.properties
  
 `distributionUrl=https\://services.gradle.org/distributions/gradle-3.0-all.zip`
+
+### 解决版本冲突
+https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html
