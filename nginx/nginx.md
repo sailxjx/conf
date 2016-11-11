@@ -16,3 +16,6 @@ server {
 ### turn off 304
 if_modified_since off
 http://wiki.nginx.org/NginxHttpCoreModule#if_modified_since
+
+### 使用正则表达式配置域名
+http://nginx.org/en/docs/http/server_names.html
