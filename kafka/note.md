@@ -31,7 +31,7 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 
 ```bash
-./bin/kafka-console-producer --broker-list localhost:9092 --topic test
+./bin/kafka-console-producer --broker-list 192.168.0.124:39092 --topic test
 ```
 
     
@@ -41,7 +41,10 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 ```bash
 # Listen to a topic `from beginning`
-./bin/kafka-console-consumer  --zookeeper localhost:2181 --topic wikipedia-raw --from-beginning
+./bin/kafka-console-consumer  --zookeeper 192.168.0.124:32181 --topic wikipedia-raw --from-beginning
+
+# >= 3.1.0
+./bin/kafka-console-consumer --bootstrap-server 192.168.0.124:39092 --topic test --from-beginning
 ```
 
 ### Delete a topic
@@ -49,4 +52,19 @@ cd ~/Downloads/kafka_2.11-0.10.0.0
 
 ```bash
 ./bin/kafka-topics --delete --zookeeper localhost:2181 --topic try-test
+```
+
+# kafka rest
+
+
+```bash
+# Get topics
+curl -XGET http://192.168.0.124:38082/topics
+```
+
+    ["__consumer_offsets","_schemas","mongo_local_test_users","test"]
+
+
+```bash
+
 ```

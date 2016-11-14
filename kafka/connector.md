@@ -5,10 +5,16 @@
 ```bash
 # Start schema registry via docker
 docker run --name cp-schema-registry -p 8081:28081 \
-    -e SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL=zookeeper:42181/defaultconfig \
+    -e SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL=192.168.0.124:32181 \
     -e SCHEMA_REGISTRY_HOST_NAME=schema-registry \
-    -e SCHEMA_REGISTRY_LISTENERS=http://192.168.0.124:48081 \
+    -e SCHEMA_REGISTRY_LISTENERS=http://192.168.0.124:38081 \
     -d confluentinc/cp-schema-registry
+```
+
+
+```bash
+# KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.0.124:39092
+# 需要使用明确的 IP 地址和 host 模式，否则外部请求会因为无法访问 docker 中的地址而出现错误
 ```
 
 
