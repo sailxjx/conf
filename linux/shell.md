@@ -191,3 +191,26 @@ echo $VERSION
 
     2.0
 
+
+### 将 heredoc 赋值给变量
+
+
+```bash
+# http://stackoverflow.com/questions/1167746/how-to-assign-a-heredoc-value-to-a-variable-in-bash
+read -r -d '' HELP <<EOF
+HELP ME
+PLEASE!
+EOF
+
+# 保留换行需要在变量两旁加双引号
+echo "$HELP"
+```
+
+    HELP ME
+    PLEASE!
+
+
+
+```bash
+
+```
