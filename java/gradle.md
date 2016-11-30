@@ -21,6 +21,24 @@ task taskY << {
 }
 ```
 
+### 打包到不同文件夹
+
+```groovy
+distributions {
+  main {
+    contents {
+      into('bin') {
+        from 'bin/'
+      }
+      into('lib') {
+        from jar
+        from project.configurations.runtime
+      }
+    }
+  }
+}
+```
+
 > gradle -q taskX
 
     taskY
@@ -34,3 +52,10 @@ $ vim gradle/wrapper/gradle-wrapper.properties
 
 ### 解决版本冲突
 https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html
+
+### 创建可执行程序
+http://stackoverflow.com/questions/14733566/how-to-run-kotlin-class-from-the-command-line
+```
+apply plugin: 'application'
+mainClassName = "org.apache.kafka.connect.mongo.tools.ImportDataKt"
+```
