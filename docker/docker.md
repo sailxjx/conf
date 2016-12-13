@@ -44,3 +44,10 @@ docker cp mycontainer:/foo.txt foo.txt
 ## Environment
 
 `docker run -e "A=B" -d image`
+
+## 跳过缓存重新 Build
+`docker build --no-cache=true -t u12_core -f u12_core .`
+
+## Dockerfile FROM 中使用环境变量
+`cat Dockerfile | sed "s/FROM.*/FROM $$BASE_IMAGE/" | \
+    docker build -t docker-registry.teambition.net/$$IMAGE_NAME -`

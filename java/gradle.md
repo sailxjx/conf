@@ -59,3 +59,13 @@ http://stackoverflow.com/questions/14733566/how-to-run-kotlin-class-from-the-com
 apply plugin: 'application'
 mainClassName = "org.apache.kafka.connect.mongo.tools.ImportDataKt"
 ```
+
+### 忽略嵌套依赖
+
+```
+dependencies {
+  testCompile('info.batey.kafka:kafka-unit:0.6') {
+    exclude module: 'kafka_2.11'
+  }
+}
+```
