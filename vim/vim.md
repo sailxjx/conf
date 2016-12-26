@@ -21,3 +21,9 @@
 | viw                  | 选中当前单词       |
 | select + U           | 将选中字符转成大写 |
 | select + u           | 将选中字符转成小写 |
+
+### <Esc> vs CTRL-C vs CTRL-[
+
+http://stackoverflow.com/questions/5030164/whats-the-difference-between-ctrlc-and-ctrl
+
+当多行输入时，使用 Esc 或 CTRL-[ 退出 insert 模式
