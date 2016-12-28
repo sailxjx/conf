@@ -20,6 +20,8 @@
   * [Log4j](java/log4j.md)
 - [Kafka](kafka/note.md)
   * [Connector](kafka/connector.md)
+  * [Rest proxy](kafka/rest-proxy.md)
+  * [Connect mongo](kafka/connect-mongo.md)
 - [Kotlin](kotlin/kotlin.md)
 - [Kubernetes](kubernetes/kubernetes.md)
   * [Note](kubernetes/note.md)

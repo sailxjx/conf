@@ -1,7 +1,7 @@
 
 
 ```bash
-cd /Users/tristan/coding/opensource/confluent-3.0.0
+cd /Users/tristan/coding/opensource/confluent-3.1.0
 ```
 
     
@@ -10,7 +10,7 @@ cd /Users/tristan/coding/opensource/confluent-3.0.0
 
 
 ```bash
-./bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+./bin/kafka-topics --create --zookeeper 192.168.0.21:2181 --replication-factor 1 --partitions 1 --topic test
 ```
 
     Created topic "test".

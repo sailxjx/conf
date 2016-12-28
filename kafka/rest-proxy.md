@@ -102,8 +102,3 @@ curl -X DELETE \
 ```
 
     
-
-
-```bash
-
-```

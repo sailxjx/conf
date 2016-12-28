@@ -27,3 +27,9 @@
 http://stackoverflow.com/questions/5030164/whats-the-difference-between-ctrlc-and-ctrl
 
 当多行输入时，使用 Esc 或 CTRL-[ 退出 insert 模式
+
+### 粘贴时忽略缩进
+
+忽略自动缩进 :set paste
+
+恢复自动缩进 :set nopaste
