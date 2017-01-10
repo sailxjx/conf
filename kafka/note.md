@@ -10,10 +10,12 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
 
 ```bash
-./bin/kafka-topics --create --zookeeper 192.168.0.21:2181 --replication-factor 1 --partitions 1 --topic test
+./bin/kafka-topics --create --zookeeper 192.168.0.21:32181 --replication-factor 1 --partitions 1 --topic test
 ```
 
-    Created topic "test".
+    Error while executing topic command : replication factor: 1 larger than available brokers: 0
+    [2016-12-30 11:02:47,674] ERROR org.apache.kafka.common.errors.InvalidReplicationFactorException: replication factor: 1 larger than available brokers: 0
+     (kafka.admin.TopicCommand$)
 
 
 

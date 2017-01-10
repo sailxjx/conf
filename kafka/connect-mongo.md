@@ -81,7 +81,7 @@ curl -XDELETE http://kafka:38082/consumers/connect_offsets_consumer/instances/co
 
 ```bash
 # Create connector
-curl -X POST -H "Content-Type: application/json" http://kafka:38084/connectors -d '{
+curl -X POST -H "Content-Type: application/json" http://192.168.0.21:38083/connectors -d '{
   "name": "mongo-source-21-test-users",
   "config": {
     "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
@@ -99,8 +99,24 @@ curl -X POST -H "Content-Type: application/json" http://kafka:38084/connectors -
 
 
 ```bash
+# Create mongodb connector by datareply
+curl -X POST -H "Content-Type: application/json" http://192.168.1.87:38083/connectors -d '{
+  "name": "file-source-activity",
+  "config": {
+    "connector.class": "FileStreamSource",
+    "tasks.max": 1,
+    "file": "activity.log",
+    "topic": "file-connect-test"
+  }
+}'
+```
+
+    {"name":"file-source-activity","config":{"connector.class":"FileStreamSource","tasks.max":"1","file":"activity.log","topic":"file-connect-test","name":"file-source-activity"},"tasks":[]}
+
+
+```bash
 # Get connectors
-curl http://localhost:8083/connectors
+curl http://localhost:38083/connectors
 ```
 
     []
@@ -108,7 +124,12 @@ curl http://localhost:8083/connectors
 
 ```bash
 # Delete connectors
-curl -XDELETE http://localhost:8084/connectors/mongo-source-21-test-users
+curl -XDELETE http://localhost:38083/connectors/mongo-source-21-test-users
 ```
 
     
+
+
+```bash
+
+```

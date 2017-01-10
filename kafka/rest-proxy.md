@@ -5,7 +5,7 @@
 curl http://kafka:38082/topics
 ```
 
-    ["_schemas","avrotest","binarytest","jsontest"]
+    ["__consumer_offset","__consumer_offsets","_schemas","avrotest","binarytest","connect-configs","connect-mongo-configs","connect-mongo-configs-2","connect-mongo-offsets","connect-mongo-offsets-2","connect-mongo-offsets-test","connect-mongo-status","connect-mongo-status-2","connect-offsets","connect-status","jsontest","mongo_21_teambition_activities","mongo_21_teambition_users","mongo_21_test_users","mongo_schema_teambition_users"]
 
 
 ```bash
