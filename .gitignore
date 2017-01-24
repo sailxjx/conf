@@ -2,3 +2,5 @@
 _book/
 /public/
 .ipynb_checkpoints/
+*.online.ipynb
+*.online.md

@@ -69,3 +69,7 @@ dependencies {
   }
 }
 ```
+
+### 切换 gradle wrapper 版本
+
+`./gradlew wrapper --gradle-version=3.1`

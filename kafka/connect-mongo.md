@@ -76,26 +76,44 @@ curl -XDELETE http://kafka:38082/consumers/connect_offsets_consumer/instances/co
 
     
 
-# Add mongo connector
+# Mongo source connector
+## Create source connector
 
 
 ```bash
 # Create connector
-curl -X POST -H "Content-Type: application/json" http://192.168.0.21:38083/connectors -d '{
-  "name": "mongo-source-21-test-users",
+curl -X POST -H "Content-Type: application/json" http://kafka:38084/connectors -d '{
+  "name": "mongo_source_21_t_dev",
   "config": {
     "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
-    "tasks.max": 1,
+    "tasks.max": 2,
     "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
     "batch.size": 100,
     "schema.name": "mongo_21_schema",
     "topic.prefix": "mongo_21",
-    "databases":"test.users"
+    "databases":"t.a,t.b,t.c"
   }
 }'
 ```
 
-    {"name":"mongo-source-21-test-users","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_21_schema","topic.prefix":"mongo_21","databases":"test.users","name":"mongo-source-21-test-users"},"tasks":[]}
+    {"error_code":409,"message":"Connector mongo_source_21_t_dev already exists"}
+
+## Update source connector
+
+
+```bash
+curl -X PUT -H "Content-Type: application/json" http://kafka:38084/connectors/mongo_source_21_t_dev/config -d '{
+    "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
+    "tasks.max": 2,
+    "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
+    "batch.size": 100,
+    "schema.name": "mongo_21_schema",
+    "topic.prefix": "mongo_21",
+    "databases":"t.a,t.b,t.c,teambition.activities"
+}'
+```
+
+    {"name":"mongo_source_21_t_dev","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_21_schema","topic.prefix":"mongo_21","databases":"t.a,t.b,t.c,teambition.activities","name":"mongo_source_21_t_dev"},"tasks":[{"connector":"mongo_source_21_t_dev","task":0},{"connector":"mongo_source_21_t_dev","task":1}]}
 
 
 ```bash
@@ -116,20 +134,50 @@ curl -X POST -H "Content-Type: application/json" http://192.168.1.87:38083/conne
 
 ```bash
 # Get connectors
-curl http://localhost:38083/connectors
+curl http://kafka:38084/connectors
 ```
 
-    []
+    {"error_code":500,"message":"Request timed out"}
 
 
 ```bash
-# Delete connectors
-curl -XDELETE http://localhost:38083/connectors/mongo-source-21-test-users
+# Restart task
+curl -XPOST http://kafka04:8084/connectors/mongo-source-03-teambition-users/restart
 ```
 
     
 
 
 ```bash
-
+# Delete connectors
+curl -XDELETE http://kafka:38083/connectors/mongo-source-21-test-users
 ```
+
+    
+
+# Add mongo sink connector
+
+
+```bash
+# Create connector
+curl -X POST -H "Content-Type: application/json" http://kafka:58083/connectors -d '{
+  "name": "mongo_sink_21_mt_users",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.mongo.MongoSinkConnector",
+    "tasks.max": 1,
+    "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
+    "topics": "mongo_21_test_users",
+    "databases":"mt.users"
+  }
+}'
+```
+
+    {"name":"mongo_sink_21_mt_users","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSinkConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","topics":"mongo_21_test_users","databases":"mt.users","name":"mongo_sink_21_mt_users"},"tasks":[]}
+
+
+```bash
+# Delete connectors
+curl -XDELETE http://kafka04:8084/connectors/mongo-source-03-teambition-users
+```
+
+    

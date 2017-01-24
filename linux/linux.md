@@ -181,5 +181,5 @@ apt-cache search openjdk
 
 ## 查询所有端口占用进程
 http://stackoverflow.com/questions/750604/freeing-up-a-tcp-ip-port
-`fuser 80/tcp`
+`fuser -uv 80/tcp`
 `fuser -k 80/tcp`

@@ -210,7 +210,14 @@ echo "$HELP"
     PLEASE!
 
 
+### 替换变量内容
+
 
 ```bash
-
+# http://unix.stackexchange.com/questions/104881/remove-particular-characters-from-a-variable-using-bash
+VERSION='2.3.3'
+echo "${VERSION//.}"
 ```
+
+    233
+

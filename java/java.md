@@ -20,3 +20,6 @@ System.setProperty("javax.net.ssl.trustStorePassword", "123456")
 System.setProperty("javax.net.ssl.keyStore", "keystore.ks")
 System.setProperty("javax.net.ssl.keyStorePassword", "123456")
 ```
+
+## remote 断点调试
+增加 `-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005` 参数

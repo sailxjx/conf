@@ -6,7 +6,7 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
     
 
-### Create a topic
+### 创建 topic
 
 
 ```bash
@@ -20,12 +20,26 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
 
 ```bash
-./bin/kafka-topics --list --zookeeper 192.168.0.124:32181
+./bin/kafka-topics --list --zookeeper kafka:32181
 ```
 
-    __samza_coordinator_wikipedia-feed_1
-    __samza_coordinator_wikipedia-parser_1
-    __samza_coordinator_wikipedia-stats_1
+    __consumer_offsets
+    _schemas
+    connect-mongo-configs-2
+    connect-mongo-configs-3
+    connect-mongo-offsets
+    connect-mongo-offsets-2
+    connect-mongo-offsets-3
+    connect-mongo-status-2
+    connect-mongo-status-3
+    file-connect-test
+    mongo_21_avro_activities
+    mongo_21_pay_orders
+    mongo_21_test_users
+    mongo_local_test_users
+    mongodb_local_test_users
+    mongodbprefix_mydb_test1
+    teambition_activities
     test
 
 
@@ -38,7 +52,7 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
     
 
-### Listen to a topic
+### Consume a topic
 
 
 ```bash
@@ -47,14 +61,21 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
 # >= 3.1.0
 ./bin/kafka-console-consumer --bootstrap-server 192.168.0.124:39092 --topic test --from-beginning
+
+# 包含 key
+./bin/kafka-console-consumer --bootstrap-server 192.168.0.124:39092 --property print.key=true --topic test --from-beginning
 ```
 
 ### 删除 topic
 
 
 ```bash
-./bin/kafka-topics --delete --zookeeper localhost:2181 --topic try-test
+./bin/kafka-topics --delete --zookeeper kafka:32181 --topic schema_registry_test_keyvalues
 ```
+
+    Topic schema_registry_test_keyvalues is marked for deletion.
+    Note: This will have no impact if delete.topic.enable is not set to true.
+
 
 ### 查询 topic 配置
 
@@ -150,8 +171,3 @@ curl -XGET http://192.168.0.124:38082/topics
 ```
 
     ["__consumer_offsets","_schemas","mongo_local_test_users","test"]
-
-
-```bash
-
-```

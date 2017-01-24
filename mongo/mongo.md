@@ -85,3 +85,8 @@ db.eventlog.createIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 }
 
 ## 创建 Replica set
 rs.initiate({_id:"rs0", members: [{"_id":1, "host":"127.0.0.1:27017"}]})
+
+## 通过 ts 查询 oplog
+db.oplog.rs.count({ns: 'teambition.activities', ts: {$gt: Timestamp(1483585086, 2)}}).oplogReplay(true)
+
+oplogReplay=true 可以极大的加快初始查询效率

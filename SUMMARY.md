@@ -19,6 +19,7 @@
   * [Gradle](java/gradle.md)
   * [Log4j](java/log4j.md)
   * [Jmx](java/jmx.md)
+- [Julia](julia/note.md)
 - [Kafka](kafka/note.md)
   * [Connector](kafka/connector.md)
   * [Rest proxy](kafka/rest-proxy.md)
