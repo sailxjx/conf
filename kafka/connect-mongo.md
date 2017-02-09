@@ -109,11 +109,11 @@ curl -X PUT -H "Content-Type: application/json" http://kafka:38084/connectors/mo
     "batch.size": 100,
     "schema.name": "mongo_21_schema",
     "topic.prefix": "mongo_21",
-    "databases":"t.a,t.b,t.c,teambition.activities"
+    "databases":"t.a,t.b,t.c,t.d,teambition.activities"
 }'
 ```
 
-    {"name":"mongo_source_21_t_dev","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_21_schema","topic.prefix":"mongo_21","databases":"t.a,t.b,t.c,teambition.activities","name":"mongo_source_21_t_dev"},"tasks":[{"connector":"mongo_source_21_t_dev","task":0},{"connector":"mongo_source_21_t_dev","task":1}]}
+    {"name":"mongo_source_21_t_dev","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_21_schema","topic.prefix":"mongo_21","databases":"t.a,t.b,t.c,t.d,teambition.activities","name":"mongo_source_21_t_dev"},"tasks":[{"connector":"mongo_source_21_t_dev","task":0},{"connector":"mongo_source_21_t_dev","task":1}]}
 
 
 ```bash

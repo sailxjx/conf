@@ -4,3 +4,6 @@ _book/
 .ipynb_checkpoints/
 *.online.ipynb
 *.online.md
+*.log
+metastore_db/
+spark-warehouse/

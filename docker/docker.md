@@ -51,3 +51,16 @@ docker cp mycontainer:/foo.txt foo.txt
 ## Dockerfile FROM 中使用环境变量
 `cat Dockerfile | sed "s/FROM.*/FROM $$BASE_IMAGE/" | \
     docker build -t docker-registry.teambition.net/$$IMAGE_NAME -`
+
+## 清除 docker volume 占用磁盘空间
+
+http://blog.yohanliyanage.com/2015/05/docker-clean-up-after-yourself/
+
+https://docs.docker.com/docker-for-mac/faqs/#/how-do-i-reduce-the-size-of-dockerqcow2
+
+```
+docker rm -v $(docker ps -a -q -f status=exited)
+docker rmi $(docker images -f "dangling=true" -q)
+docker volume rm $(docker volume ls -qf dangling=true)
+docker system prune  # > 1.13.0
+```

@@ -6,3 +6,6 @@ Pkg.update()
 
 ## Update to the latest package version
 Pkg.checkout("Package name")
+
+## List all installed packages
+Pkg.installed()
