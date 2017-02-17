@@ -16,3 +16,13 @@ AS $$
   return b
 $$ LANGUAGE plpythonu;
 ```
+
+# 查询表结构
+
+```
+SELECT column_name, data_type, character_maximum_length
+FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '<table name>';
+```
+
+# 转换列结构
+`SELECT cast(cost AS FLOAT), * FROM base_pay_orders;`
