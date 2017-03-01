@@ -32,7 +32,7 @@ curl -X POST -H "Content-Type: application/vnd.kafka.avro.v1+json" \
       "http://kafka:38082/topics/avrotest"
 ```
 
-    {"offsets":[{"partition":0,"offset":1,"error_code":null,"error":null}],"key_schema_id":null,"value_schema_id":1}
+    {"error_code":40801,"message":"Schema registration or lookup failed"}
 
 
 ```bash

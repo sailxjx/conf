@@ -20,3 +20,7 @@ $ launchctl load -F /System/Library/LaunchDaemons/redis.plist
 # Finder
 defaults write com.apple.finder AppleShowAllFiles Yes && killall Finder //显示隐藏文件
 defaults write com.apple.finder AppleShowAllFiles No && killall Finder //不显示隐藏文件
+
+# 重置蓝牙连接信息
+sudo rm -rf /Library/Preferences/com.apple.Bluetooth.plist*
+reboot

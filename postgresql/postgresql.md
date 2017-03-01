@@ -26,3 +26,6 @@ FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '<table name>';
 
 # 转换列结构
 `SELECT cast(cost AS FLOAT), * FROM base_pay_orders;`
+
+# Time with timezone
+`SELECT TIMESTAMP WITH TIME ZONE '2017-02-24 08:23:54+8'`
