@@ -1,5 +1,5 @@
 
-### Array
+#### Array
 http://stackoverflow.com/questions/8880603/loop-through-array-of-strings-in-bash-script
 
 
@@ -20,7 +20,7 @@ done
     EF  TG
 
 
-### Range
+#### Range
 
 
 ```bash
@@ -63,7 +63,7 @@ max=10; for in in `seq 0 $max`; do echo $i; done;
     10
 
 
-### EOF
+#### EOF
 
 
 ```bash
@@ -75,7 +75,7 @@ EOF
     echo 1
 
 
-### 默认值
+#### 默认值
 
 
 ```bash
@@ -87,7 +87,7 @@ echo $PORT
     1024
 
 
-### 截取字符串最后一个字符
+#### 截取字符串最后一个字符
 
 
 ```bash
@@ -98,7 +98,7 @@ echo ${STRING:$((${#STRING} - 1)):1}
     E
 
 
-### Pipe
+#### Pipe
 
 
 ```bash
@@ -112,7 +112,7 @@ EOF
     hello world
 
 
-### Echo to stderr
+#### Echo to stderr
 
 
 ```bash
@@ -122,7 +122,7 @@ EOF
     error
 
 
-### Cut string
+#### Cut string
 
 
 ```bash
@@ -132,7 +132,7 @@ echo 4087507e27553beda51103bfc2bacd4ef63411a6 refs/remotes/origin/HEAD | cut -d 
     4087507e27553beda51103bfc2bacd4ef63411a6
 
 
-### Compare two line of git ref
+#### Compare two line of git ref
 
 
 ```bash
@@ -141,7 +141,7 @@ git show-ref master | cut -d ' ' -f1 | uniq | wc -l | tr -d '[[:space:]]'
 
     1
 
-### Pushd/dirs/popd
+#### Pushd/dirs/popd
 
 
 ```bash
@@ -157,7 +157,7 @@ echo -e "[Pop last dir]             " `popd`
     [Pop last dir]              ~/coding/conf/linux
 
 
-### 检测到未设置变量时报错并退出程序
+#### 检测到未设置变量时报错并退出程序
 
 
 ```bash
@@ -169,7 +169,7 @@ echo $undefined-ok
 set +eu
 ```
 
-### `trap` 捕获信号并执行命令
+#### `trap` 捕获信号并执行命令
 
 
 ```bash
@@ -181,7 +181,7 @@ function handle_exit {
 trap "set +x; handle_exit" SIGQUIT SIGTERM SIGINT SIGHUP
 ```
 
-### 设置未定义变量
+#### 设置未定义变量
 
 
 ```bash
@@ -192,7 +192,7 @@ echo $VERSION
     2.0
 
 
-### 将 heredoc 赋值给变量
+#### 将 heredoc 赋值给变量
 
 
 ```bash
@@ -210,7 +210,7 @@ echo "$HELP"
     PLEASE!
 
 
-### 替换变量内容
+#### 替换变量内容
 
 
 ```bash
@@ -221,3 +221,22 @@ echo "${VERSION//.}"
 
     233
 
+
+#### 转义 $ 符号
+
+
+```bash
+cat << \EOF
+$PATH
+EOF
+```
+
+    $PATH
+
+
+#### top 特定程序
+
+
+```bash
+top -c -p $(pgrep -d',' -f string_to_match_in_cmd_line)
+```
