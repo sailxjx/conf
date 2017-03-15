@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+    labels:
+        app: kafka-rest
+    name: kafka-rest
+    namespace: default
+spec:
+    clusterIP: 11.1.2.199
+    ports:
+    - nodePort: 30998
+      port: 8082
+      protocol: TCP
+      targetPort: 8082
+    selector:
+      app: kafka-rest
+    type: NodePort
+status:
+    loadBalancer: {}
+

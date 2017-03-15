@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kafka-rest-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: kafka-rest
+    spec:
+      containers:
+      - name: kafka-rest
+        image: confluentinc/cp-kafka-rest:3.2
+        ports:
+        - containerPort: 8082
+          protocol: TCP
+        env:
+        - name: KAFKA_REST_ZOOKEEPER_CONNECT
+          value: 10.0.0.1:22181,10.0.0.1:32181,10.0.0.1:42181
+        - name: KAFKA_REST_HOST_NAME
+          value: 121.196.214.67
+        - name: KAFKA_REST_LISTENERS
+          value: http://0.0.0.0:8082
+        - name: KAFKA_REST_SCHEMA_REGISTRY_URL
+          value: http://10.0.0.1:38081
+

@@ -9,3 +9,6 @@ kubectl expose deployment hello-node --type="LoadBalancer"
 # 编辑不同 namespace 下的配置
 kubectl edit deployment kubernetes-dashboard --namespace=kube-system
 ```
+
+# rollout
+`kubectl rollout status deployment/kafka-rest-deployment`
