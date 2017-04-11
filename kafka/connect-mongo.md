@@ -82,7 +82,7 @@ curl -XDELETE http://kafka:38082/consumers/connect_offsets_consumer/instances/co
 
 ```bash
 # Create connector
-curl -X POST -H "Content-Type: application/json" http://kafka/connect-mongo/connectors -d '{
+curl -X POST -H "Content-Type: application/json" http://connect-mongo.dev22/connectors -d '{
   "name": "mongo_source_21",
   "config": {
     "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",

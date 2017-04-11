@@ -23,3 +23,10 @@ System.setProperty("javax.net.ssl.keyStorePassword", "123456")
 
 ## remote 断点调试
 增加 `-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005` 参数
+
+#### 查看线程
+jstack 31134
+
+#### List vs Collection
+
+http://stackoverflow.com/questions/3317381/what-is-the-difference-between-collection-and-list-in-java

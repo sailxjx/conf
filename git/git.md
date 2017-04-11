@@ -83,3 +83,6 @@ git rev-list v2.0.0-rc1 | head -n 1
 # 更新从根节点开始的提交记录 git rebase -i --root
 
 # 合并/更新从 HEAD 到之前某次的提交记录 git rebase -i HEAD~10
+
+#### 提交空的 commit
+git commit --allow-empty -m "Trigger notification"

@@ -21,6 +21,7 @@
 | viw                  | 选中当前单词       |
 | select + U           | 将选中字符转成大写 |
 | select + u           | 将选中字符转成小写 |
+| :sort u              | 排序               |
 
 ### <Esc> vs CTRL-C vs CTRL-[
 
