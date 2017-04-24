@@ -80,10 +80,10 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
 
 ```bash
-./bin/kafka-topics --delete --zookeeper kafka:32181 --topic schema_registry_test_keyvalues
+kafka-topics --delete --zookeeper kafka:32181 --topic file_test
 ```
 
-    Topic schema_registry_test_keyvalues is marked for deletion.
+    Topic file_test is marked for deletion.
     Note: This will have no impact if delete.topic.enable is not set to true.
 
 

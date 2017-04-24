@@ -82,21 +82,38 @@ curl -XDELETE http://kafka:38082/consumers/connect_offsets_consumer/instances/co
 
 ```bash
 # Create connector
-curl -X POST -H "Content-Type: application/json" http://connect-mongo.dev22/connectors -d '{
-  "name": "mongo_source_21",
+curl -X POST -H "Content-Type: application/json" http://kafka-connect-mongo.dev22/connectors -d '{
+  "name": "mongo_source_test",
   "config": {
     "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
     "tasks.max": 2,
     "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
     "batch.size": 100,
-    "schema.name": "mongo_21_schema",
-    "topic.prefix": "mongo_21",
+    "schema.name": "mongo_test_schema",
+    "topic.prefix": "mongo_test",
     "databases":"t.a,t.b,t.c"
   }
 }'
 ```
 
-    {"name":"mongo_source_21","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_21_schema","topic.prefix":"mongo_21","databases":"t.a,t.b,t.c","name":"mongo_source_21"},"tasks":[]}
+    {"name":"mongo_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"t.a,t.b,t.c","name":"mongo_source_test"},"tasks":[]}
+
+
+```bash
+# Create cron connector
+curl -X PUT -H "Content-Type: application/json" http://kafka-connect-mongo.dev22/connectors/mongo_cron_source_test/config -d '{
+    "connector.class": "org.apache.kafka.connect.mongo.MongoCronSourceConnector",
+    "tasks.max": 1,
+    "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
+    "batch.size": 100,
+    "schema.name": "mongo_test_schema",
+    "topic.prefix": "mongo_test",
+    "databases":"t.a,t.b",
+    "schedule": "0 0 * * * ?"
+}'
+```
+
+    {"name":"mongo_cron_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoCronSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"t.a,t.b","schedule":"0 0 * * * ?","name":"mongo_cron_source_test"},"tasks":[{"connector":"mongo_cron_source_test","task":0}]}
 
 ## Update source connector
 
@@ -150,7 +167,7 @@ curl -XPOST http://kafka04:8084/connectors/mongo-source-03-teambition-users/rest
 
 ```bash
 # Delete connectors
-curl -XDELETE http://kafka:38083/connectors/mongo-source-21-test-users
+curl -XDELETE http://kafka:38083/connectors/mongo_source_21
 ```
 
     
