@@ -29,3 +29,9 @@ FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '<table name>';
 
 # Time with timezone
 `SELECT TIMESTAMP WITH TIME ZONE '2017-02-24 08:23:54+8'`
+
+# 设置环境变量密码
+
+http://stackoverflow.com/questions/6405127/how-do-i-specify-a-password-to-psql-non-interactively
+
+`PGPASSWORD=pass1234 psql -U MyUsername myUserName`

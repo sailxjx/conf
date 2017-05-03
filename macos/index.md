@@ -24,3 +24,6 @@ defaults write com.apple.finder AppleShowAllFiles No && killall Finder //不显�
 # 重置蓝牙连接信息
 sudo rm -rf /Library/Preferences/com.apple.Bluetooth.plist*
 reboot
+
+# 禁止屏幕闪烁
+sudo killall coreaudiod

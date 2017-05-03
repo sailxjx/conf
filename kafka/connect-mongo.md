@@ -83,20 +83,28 @@ curl -XDELETE http://kafka:38082/consumers/connect_offsets_consumer/instances/co
 ```bash
 # Create connector
 curl -X POST -H "Content-Type: application/json" http://kafka-connect-mongo.dev22/connectors -d '{
-  "name": "mongo_source_test",
+  "name": "mongo_cron_source_test",
   "config": {
-    "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
-    "tasks.max": 2,
+    "connector.class": "org.apache.kafka.connect.mongo.MongoCronSourceConnector",
+    "tasks.max": 1,
     "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
     "batch.size": 100,
     "schema.name": "mongo_test_schema",
     "topic.prefix": "mongo_test",
-    "databases":"t.a,t.b,t.c"
+    "databases":"pay.customers,pay.salers,spider.orgs,teambition.applications,teambition.exportedlogs,teambition.projecttemplates",
+    "schedule": "0 0 01 * * ?"
   }
 }'
 ```
 
-    {"name":"mongo_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"t.a,t.b,t.c","name":"mongo_source_test"},"tasks":[]}
+    {"name":"mongo_cron_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoCronSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"pay.customers,pay.salers,spider.orgs,teambition.applications,teambition.exportedlogs,teambition.projecttemplates","schedule":"0 0 01 * * ?","name":"mongo_cron_source_test"},"tasks":[{"connector":"mongo_cron_source_test","task":0}]}
+
+
+```bash
+curl -X DELETE http://kafka-connect-mongo.dev22/connectors/mongo_cron_source_test
+```
+
+    
 
 
 ```bash
@@ -109,11 +117,18 @@ curl -X PUT -H "Content-Type: application/json" http://kafka-connect-mongo.dev22
     "schema.name": "mongo_test_schema",
     "topic.prefix": "mongo_test",
     "databases":"t.a,t.b",
-    "schedule": "0 0 * * * ?"
+    "schedule": "0 * 14 * * ?"
 }'
 ```
 
-    {"name":"mongo_cron_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoCronSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"t.a,t.b","schedule":"0 0 * * * ?","name":"mongo_cron_source_test"},"tasks":[{"connector":"mongo_cron_source_test","task":0}]}
+    {"name":"mongo_cron_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoCronSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"t.a,t.b","schedule":"0 * 14 * * ?","name":"mongo_cron_source_test"},"tasks":[{"connector":"mongo_cron_source_test","task":0},{"connector":"mongo_cron_source_test","task":1}]}
+
+
+```bash
+curl -X DELETE http://kafka-connect-mongo.dev22/connectors/mongo_cron_source_test
+```
+
+    
 
 ## Update source connector
 

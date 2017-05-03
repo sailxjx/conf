@@ -12,3 +12,10 @@ trap cleanup EXIT
 mkdir /tmp/foo
 asdffdsa #Fails
 ```
+
+### 将环境变量带入 sudo 命令
+
+http://stackoverflow.com/questions/8633461/how-to-keep-environment-variables-when-using-sudo
+
+`sudo -E $cmd`
+
