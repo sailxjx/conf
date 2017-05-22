@@ -34,3 +34,7 @@ http://stackoverflow.com/questions/5030164/whats-the-difference-between-ctrlc-an
 忽略自动缩进 :set paste
 
 恢复自动缩进 :set nopaste
+
+### vim macro
+
+q[a-z] -> do anything -> q -> @[a-z] -> @@
