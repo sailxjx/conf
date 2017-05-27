@@ -1,5 +1,6 @@
 # Configs, cheatsheets and dot files
 
+- [clojure](clojure/clojure.md)
 - [CouchDB](couchdb/note.md)
 - [Css](css/css.md)
 - [Docker](docker/docker.md)
@@ -68,6 +69,7 @@
   * [Gem](ruby/gem.md)
   * [Rails](ruby/rails.md)
 - [Sketch](sketch/sketch.md)
+- [spark](spark/note.md)
 - [Urban](urban/readme.md)
 - [Vim](vim/vim.md)
 - [Yaml](yaml/yaml.md)
