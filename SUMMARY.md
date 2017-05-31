@@ -1,6 +1,6 @@
 # Configs, cheatsheets and dot files
 
-- [clojure](clojure/clojure.md)
+- [Clojure](clojure/clojure.md)
 - [CouchDB](couchdb/note.md)
 - [Css](css/css.md)
 - [Docker](docker/docker.md)
@@ -61,8 +61,8 @@
   * [Brew](macos/brew.md)
   * [Xcode](macos/xcode.md)
 - [PHP](php/php.md)
-  * [Fuck](php/fuck.md)
 - [Postgresql](postgresql/postgresql.md)
+  * [Redshift](postgresql/redshift.md)
 - [Python](python/python.md)
 - [Regexp](regexp/regexp.md)
 - [Ruby](ruby/ruby.md)
