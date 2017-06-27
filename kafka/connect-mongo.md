@@ -83,6 +83,25 @@ curl -XDELETE http://kafka:38082/consumers/connect_offsets_consumer/instances/co
 ```bash
 # Create connector
 curl -X POST -H "Content-Type: application/json" http://kafka-connect-mongo.dev22/connectors -d '{
+  "name": "mongo_source_test",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
+    "tasks.max": 8,
+    "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
+    "batch.size": 100,
+    "schema.name": "mongo_test_schema",
+    "topic.prefix": "mongo_test",
+    "databases":"pay.activities,pay.customers,pay.deals,pay.orders,pay.organizations,pay.peoples,pay.toids,spider.orgs,teambition.activities,teambition.apprelations,teambition.collections,teambition.customfields,teambition.events,teambition.groups,teambition.linkprojects,teambition.members,teambition.objectlinks,teambition.organizations,teambition.posts,teambition.projects,teambition.rules,teambition.stages,teambition.tags,teambition.tasklists,teambition.tasks,teambition.teams,teambition.users,teambition.usersources,teambition.versions,teambition.works,teambition.worktimes"
+  }
+}'
+```
+
+    {"error_code":409,"message":"Connector mongo_source_test already exists"}
+
+
+```bash
+# Create cron connector
+curl -X POST -H "Content-Type: application/json" http://kafka-connect-mongo.dev22/connectors -d '{
   "name": "mongo_cron_source_test",
   "config": {
     "connector.class": "org.apache.kafka.connect.mongo.MongoCronSourceConnector",
@@ -91,14 +110,14 @@ curl -X POST -H "Content-Type: application/json" http://kafka-connect-mongo.dev2
     "batch.size": 100,
     "schema.name": "mongo_test_schema",
     "topic.prefix": "mongo_test",
-    "databases":"pay.activities,pay.customers,pay.deals,pay.orders,pay.toids,spider.orgs,teambition.activities,teambition.apprelations,teambition.collections,teambition.customfields,teambition.events,teambition.groups,teambition.linkprojects,teambition.members,teambition.objectlinks,teambition.organizations,teambition.posts,teambition.projects,teambition.rules,teambition.sources,teambition.stages,teambition.tags,teambition.tasklists,teambition.tasks,teambition.teams,teambition.users,teambition.usersources,teambition.versions,teambition.works",
+    "databases":"pay.salers,pay.users,teambition.applications,teambition.exportedlogs,teambition.projecttemplates",
     "schedule": "0 0 01 * * ?",
     "name": "mongo_cron_source_test"
   }
 }'
 ```
 
-    {"name":"mongo_cron_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoCronSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"pay.activities,pay.customers,pay.deals,pay.orders,pay.toids,spider.orgs,teambition.activities,teambition.apprelations,teambition.collections,teambition.customfields,teambition.events,teambition.groups,teambition.linkprojects,teambition.members,teambition.objectlinks,teambition.organizations,teambition.posts,teambition.projects,teambition.rules,teambition.sources,teambition.stages,teambition.tags,teambition.tasklists,teambition.tasks,teambition.teams,teambition.users,teambition.usersources,teambition.versions,teambition.works","schedule":"0 0 01 * * ?","name":"mongo_cron_source_test"},"tasks":[]}
+    {"name":"mongo_cron_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoCronSourceConnector","tasks.max":"1","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"pay.salers,pay.users,teambition.applications,teambition.exportedlogs,teambition.projecttemplates","schedule":"0 0 01 * * ?","name":"mongo_cron_source_test"},"tasks":[]}
 
 
 ```bash
@@ -135,18 +154,18 @@ curl -X DELETE http://kafka-connect-mongo.dev22/connectors/mongo_cron_source_tes
 
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" http://kafka:38084/connectors/mongo_source_21_t_dev/config -d '{
+curl -X PUT -H "Content-Type: application/json" http://kafka-connect-mongo.dev22/connectors/mongo_source_test/config -d '{
     "connector.class": "org.apache.kafka.connect.mongo.MongoSourceConnector",
-    "tasks.max": 2,
+    "tasks.max": 8,
     "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin",
     "batch.size": 100,
-    "schema.name": "mongo_21_schema",
-    "topic.prefix": "mongo_21",
-    "databases":"t.a,t.b,t.c,t.d,teambition.activities"
+    "schema.name": "mongo_test_schema",
+    "topic.prefix": "mongo_test",
+    "databases":"pay.activities,pay.customers,pay.deals,pay.orders,pay.organizations,pay.peoples,pay.toids,spider.orgs,teambition.activities,teambition.apprelations,teambition.collections,teambition.customfields,teambition.events,teambition.groups,teambition.linkprojects,teambition.members,teambition.objectlinks,teambition.organizations,teambition.posts,teambition.projects,teambition.rules,teambition.stages,teambition.tags,teambition.tasklists,teambition.tasks,teambition.teams,teambition.users,teambition.usersources,teambition.versions,teambition.works,teambition.worktimes"
 }'
 ```
 
-    {"name":"mongo_source_21_t_dev","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"2","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_21_schema","topic.prefix":"mongo_21","databases":"t.a,t.b,t.c,t.d,teambition.activities","name":"mongo_source_21_t_dev"},"tasks":[{"connector":"mongo_source_21_t_dev","task":0},{"connector":"mongo_source_21_t_dev","task":1}]}
+    {"name":"mongo_source_test","config":{"connector.class":"org.apache.kafka.connect.mongo.MongoSourceConnector","tasks.max":"8","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","batch.size":"100","schema.name":"mongo_test_schema","topic.prefix":"mongo_test","databases":"pay.activities,pay.customers,pay.deals,pay.orders,pay.organizations,pay.peoples,pay.toids,spider.orgs,teambition.activities,teambition.apprelations,teambition.collections,teambition.customfields,teambition.events,teambition.groups,teambition.linkprojects,teambition.members,teambition.objectlinks,teambition.organizations,teambition.posts,teambition.projects,teambition.rules,teambition.stages,teambition.tags,teambition.tasklists,teambition.tasks,teambition.teams,teambition.users,teambition.usersources,teambition.versions,teambition.works,teambition.worktimes","name":"mongo_source_test"},"tasks":[{"connector":"mongo_source_test","task":0},{"connector":"mongo_source_test","task":1},{"connector":"mongo_source_test","task":2},{"connector":"mongo_source_test","task":3},{"connector":"mongo_source_test","task":4},{"connector":"mongo_source_test","task":5},{"connector":"mongo_source_test","task":6},{"connector":"mongo_source_test","task":7}]}
 
 
 ```bash
