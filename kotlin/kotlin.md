@@ -8,3 +8,12 @@ http://stackoverflow.com/questions/39365736/a-simple-kotlin-class-with-mockito-t
 # There is no checked exceptions in kotlin
 > http://stackoverflow.com/questions/36528515/throws-exception-in-a-method-with-kotlin
 > https://kotlinlang.org/docs/reference/exceptions.html#checked-exceptions
+
+# 物化泛型
+https://discuss.kotlinlang.org/t/reified-generics/1072
+
+# 执行 kotlin script
+```
+kotlinc FileUtil.kt -include-runtime -d fileutil.jar
+java -jar fileutil.jar
+```
