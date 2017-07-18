@@ -11,3 +11,8 @@ awk '{ print $11 "\t" $0 }' | sort -n
 ## GUN awk asort
 
 awk '{ list[$11] = list[$11] "\t" $0 } END { n = asorti(list, indexes); for (i = 1; i <= n; i++) printf "%s%s\n", indexes[i], list[indexes[i]] }'
+
+## 分割
+
+https://stackoverflow.com/questions/8009664/how-to-split-a-delimited-string-into-an-array-in-awk
+awk '{split($0,a,"@");print a[1]}'
