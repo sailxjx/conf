@@ -35,3 +35,11 @@ FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '<table name>';
 http://stackoverflow.com/questions/6405127/how-do-i-specify-a-password-to-psql-non-interactively
 
 `PGPASSWORD=pass1234 psql -U MyUsername myUserName`
+
+# psql 命令
+https://dba.stackexchange.com/questions/1285/how-do-i-list-all-databases-and-tables-using-psql
+```
+\list or \l: list all databases
+\dt: list all tables in the current database
+\connect database_name connect to database
+```

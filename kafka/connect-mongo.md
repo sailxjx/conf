@@ -211,10 +211,10 @@ curl http://kafka:38084/connectors
 
 ```bash
 # Restart task
-curl -XPOST http://kafka04:8084/connectors/mongo-source-03-teambition-users/restart
+curl -XPOST http://kafka-connect-mongo.dev22/connectors/mongo_cron_source_test/restart
 ```
 
-    
+    {"error_code":500,"message":"Failed to start connector: mongo_cron_source_test"}
 
 
 ```bash

@@ -11,3 +11,6 @@ Flatten selection to bitmap
 # Shortcuts
 
 https://medium.com/sketch-app/sketch-keyboard-shortcuts-42c06583ae83
+
+# 自动字宽
+设置 width 为 auto
