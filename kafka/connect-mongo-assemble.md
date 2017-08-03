@@ -12,7 +12,7 @@ curl -X POST -H "Content-Type: application/json" http://kafka:38093/connectors -
     "batch.size": 100,
     "schema.prefix": "mongo_assemble_",
     "topic.prefix": "mongo_assemble_",
-    "handler.names": "com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandler,com.teambition.kafka.connect.mongo.assemble.handlers.WorkTimeHandler",
+    "handler.names": "com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandler,com.teambition.kafka.connect.mongo.assemble.handlers.WorkTimeHandler,com.teambition.kafka.connect.mongo.assemble.handlers.TaskCustomFieldHandler",
     "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin"
   }
 }'
@@ -30,12 +30,12 @@ curl -X PUT -H "Content-Type: application/json" http://kafka:38093/connectors/mo
     "batch.size": 100,
     "schema.prefix": "mongo_assemble_",
     "topic.prefix": "mongo_assemble_",
-    "handler.names": "com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandler,com.teambition.kafka.connect.mongo.assemble.handlers.WorkTimeHandler",
+    "handler.names": "com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandler,com.teambition.kafka.connect.mongo.assemble.handlers.WorkTimeHandler,com.teambition.kafka.connect.mongo.assemble.handlers.TaskCustomFieldHandler",
     "mongo.uri": "mongodb://root:root@192.168.0.21:27017/?authSource=admin"
 }'
 ```
 
-    {"error_code":400,"message":"Connector configuration is invalid and contains the following 1 error(s):\nMissing required configuration \"handler.names\" which has no default value.\nYou can also find the above list of errors at the endpoint `/{connectorType}/config/validate`"}
+    {"name":"mongo-assemble-tasks-source-connector","config":{"connector.class":"com.teambition.kafka.connect.mongo.assemble.MongoSourceConnector","tasks.max":"2","batch.size":"100","schema.prefix":"mongo_assemble_","topic.prefix":"mongo_assemble_","handler.names":"com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandler,com.teambition.kafka.connect.mongo.assemble.handlers.WorkTimeHandler,com.teambition.kafka.connect.mongo.assemble.handlers.TaskCustomFieldHandler","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","name":"mongo-assemble-tasks-source-connector"},"tasks":[{"connector":"mongo-assemble-tasks-source-connector","task":0},{"connector":"mongo-assemble-tasks-source-connector","task":1}]}
 
 # Remove source controller
 

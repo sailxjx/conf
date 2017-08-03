@@ -17,3 +17,10 @@ https://discuss.kotlinlang.org/t/reified-generics/1072
 kotlinc FileUtil.kt -include-runtime -d fileutil.jar
 java -jar fileutil.jar
 ```
+
+# 比较 reified class type
+```
+reified V  ==> Boolean
+V::class == Boolean::class  ==> false
+V::class == java.lang.Boolean::class  ==> true
+```

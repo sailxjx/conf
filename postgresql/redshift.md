@@ -7,3 +7,12 @@
 2. Interval 转换为 Integer 
 
 `extract(SECONDS FROM (end_time - start_time))`
+
+# 移除死锁的 query
+```
+SELECT * FROM stv_recents
+WHERE query like '%base_customers%'
+  AND status = 'Running';
+
+SELECT pg_terminate_backend(pid);
+```
