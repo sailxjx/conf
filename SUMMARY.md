@@ -6,6 +6,8 @@
 - [Docker](docker/docker.md)
 - [Elasticsearch](elasticsearch/elasticsearch.md)
   * [Resync A River](elasticsearch/resync-a-river.md)
+- [Elixir](elixir/elixir.md)
+  * [Phoenix](elixir/phoenix.md)
 - [Git](git/git.md)
   * [Github](git/github.md)
 - [Httpd](httpd/httpd.md)

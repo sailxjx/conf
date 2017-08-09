@@ -6,7 +6,8 @@ commit:
 publish:
 	rm -rf public/* && cp .gitignore ./public/.gitignore && \
 		jupyter-nbconvert --to markdown ./**/*.ipynb && \
-		gitbook build . public && \
+		gitbook build . _book && \
+		cp -rf _book/* public/ && \
 		cd public && git add --all && git commit -am "Publish" && git push
 
 .PHONY: commit publish
