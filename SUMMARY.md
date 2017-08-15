@@ -1,7 +1,7 @@
 # Configs, cheatsheets and dot files
 
 - [Clojure](clojure/clojure.md)
-- [CouchDB](couchdb/note.md)
+- [CouchDB](couchdb/couchdb.md)
 - [Css](css/css.md)
 - [Docker](docker/docker.md)
 - [Elasticsearch](elasticsearch/elasticsearch.md)
