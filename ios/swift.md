@@ -56,3 +56,4 @@ var bool = false
 setValue(&string, key: "String")
 setValue(&bool, key: "Bool")
 ```
+

@@ -80,8 +80,12 @@ cd /Users/tristan/coding/opensource/confluent-3.1.0
 
 
 ```bash
-kafka-topics --delete --zookeeper kafka:32181 --topic mongo_assemble_activities_fact
+kafka-topics --delete --zookeeper kafka:32181 --topic mongo_assemble_events_dimension
 ```
+
+    Topic mongo_assemble_events_dimension is marked for deletion.
+    Note: This will have no impact if delete.topic.enable is not set to true.
+
 
 ### 查询 topic 配置
 

@@ -43,3 +43,10 @@ https://dba.stackexchange.com/questions/1285/how-do-i-list-all-databases-and-tab
 \dt: list all tables in the current database
 \connect database_name connect to database
 ```
+
+# 用 select 语句建表
+```sql
+CREATE TABLE IF NOT EXISTS tasks_trend_fact AS (SELECT
+  * FROM tasks_dimension
+);
+```

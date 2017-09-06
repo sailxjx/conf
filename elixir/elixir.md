@@ -10,3 +10,6 @@ iex> :observer.start
 
 # Print
 IO.inspect
+
+# recompile
+iex(1) > recompile
