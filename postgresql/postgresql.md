@@ -50,3 +50,7 @@ CREATE TABLE IF NOT EXISTS tasks_trend_fact AS (SELECT
   * FROM tasks_dimension
 );
 ```
+
+# 获取 jsonb array 元素
+
+`select array_to_json(stages)->0->>'name' from bkpreferences;`

@@ -18,3 +18,7 @@ iex(1) > recompile
 
 `Map.from_struct`
 https://stackoverflow.com/questions/36512627/elixir-convert-struct-to-map
+
+# Distribute
+
+https://hexdocs.pm/elixir/Node.html
