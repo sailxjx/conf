@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="141.42mm" height="100mm" viewBox="0 0 141.42 100"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-58490c5b-1">
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-58490c5b-2">
+    <text x="76.29" y="88.39" text-anchor="middle" dy="0.6em">x</text>
+  </g>
+  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-58490c5b-3">
+    <text x="18.15" y="81.72" text-anchor="middle" dy="0.6em">0</text>
+    <text x="47.22" y="81.72" text-anchor="middle" dy="0.6em">1</text>
+    <text x="76.29" y="81.72" text-anchor="middle" dy="0.6em">2</text>
+    <text x="105.35" y="81.72" text-anchor="middle" dy="0.6em">3</text>
+    <text x="134.42" y="81.72" text-anchor="middle" dy="0.6em">4</text>
+  </g>
+<g clip-path="url(#img-58490c5b-4)">
+  <g id="img-58490c5b-5">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-58490c5b-6">
+      <rect x="16.15" y="5" width="120.27" height="75.72"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-58490c5b-7">
+      <path fill="none" d="M16.15,78.72 L 136.42 78.72"/>
+      <path fill="none" d="M16.15,54.81 L 136.42 54.81"/>
+      <path fill="none" d="M16.15,30.91 L 136.42 30.91"/>
+      <path fill="none" d="M16.15,7 L 136.42 7"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-58490c5b-8">
+      <path fill="none" d="M18.15,5 L 18.15 80.72"/>
+      <path fill="none" d="M47.22,5 L 47.22 80.72"/>
+      <path fill="none" d="M76.29,5 L 76.29 80.72"/>
+      <path fill="none" d="M105.35,5 L 105.35 80.72"/>
+      <path fill="none" d="M134.42,5 L 134.42 80.72"/>
+    </g>
+    <g class="plotpanel" id="img-58490c5b-9">
+      <g class="geometry" id="img-58490c5b-10">
+        <g stroke-width="0.3" id="img-58490c5b-11">
+          <g class="color_RGBA{Float32}(0.0f0,0.74736935f0,1.0f0,1.0f0)" stroke="#FFFFFF" fill="#00BFFF" id="img-58490c5b-12">
+            <use xlink:href="#img-58490c5b-13" x="134.42" y="21.34"/>
+          </g>
+          <g class="color_RGBA{Float32}(0.0f0,0.74736935f0,1.0f0,1.0f0)" stroke="#FFFFFF" fill="#00BFFF" id="img-58490c5b-14">
+            <use xlink:href="#img-58490c5b-15" x="105.35" y="40.47"/>
+          </g>
+          <g class="color_RGBA{Float32}(0.0f0,0.74736935f0,1.0f0,1.0f0)" stroke="#FFFFFF" fill="#00BFFF" id="img-58490c5b-16">
+            <use xlink:href="#img-58490c5b-17" x="76.29" y="69.15"/>
+          </g>
+          <g class="color_RGBA{Float32}(0.0f0,0.74736935f0,1.0f0,1.0f0)" stroke="#FFFFFF" fill="#00BFFF" id="img-58490c5b-18">
+            <use xlink:href="#img-58490c5b-19" x="47.22" y="73.93"/>
+          </g>
+        </g>
+      </g>
+      <g stroke-width="0.3" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="none" stroke="#00BFFF" id="img-58490c5b-20">
+        <path fill="none" d="M47.22,73.93 L 76.29 69.15 105.35 40.47 134.42 21.34"/>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-58490c5b-21">
+    <text x="15.15" y="78.72" text-anchor="end" dy="0.35em">0</text>
+    <text x="15.15" y="54.81" text-anchor="end" dy="0.35em">5</text>
+    <text x="15.15" y="30.91" text-anchor="end" dy="0.35em">10</text>
+    <text x="15.15" y="7" text-anchor="end" dy="0.35em">15</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-58490c5b-22">
+    <text x="8.81" y="42.86" text-anchor="end" dy="0.35em">y</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-58490c5b-4">
+  <path d="M16.15,5 L 136.42 5 136.42 80.72 16.15 80.72" />
+</clipPath>
+  <g id="img-58490c5b-13">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+  <g id="img-58490c5b-15">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+  <g id="img-58490c5b-17">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+  <g id="img-58490c5b-19">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+</defs>
+</svg>

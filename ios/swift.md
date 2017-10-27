@@ -57,3 +57,6 @@ setValue(&string, key: "String")
 setValue(&bool, key: "Bool")
 ```
 
+# Stackoverflows
+
+https://stackoverflow.com/questions/38216196/property-self-title-not-initialized-at-super-init-call-in-swift

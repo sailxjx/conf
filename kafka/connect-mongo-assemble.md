@@ -18,13 +18,13 @@ curl -X POST -H "Content-Type: application/json" http://kafka:38093/connectors -
 }'
 ```
 
-    {"name":"mongo-assemble-tasks-source-connector","config":{"connector.class":"com.teambition.kafka.connect.mongo.assemble.MongoSourceConnector","tasks.max":"2","batch.size":"100","schema.prefix":"mongo_assemble_","topic.prefix":"mongo_assemble_","handler.names":"com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandler,com.teambition.kafka.connect.mongo.assemble.handlers.WorkTimeHandler","mongo.uri":"mongodb://root:root@192.168.0.21:27017/?authSource=admin","name":"mongo-assemble-tasks-source-connector"},"tasks":[{"connector":"mongo-assemble-tasks-source-connector","task":0}]}
+    {"error_code":500,"message":"Error writing connector configuration to Kafka"}
 
 # Update source connector
 
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" http://kafka:38093/connectors/mongo-assemble-tasks-source-connector/config -d '{
+curl -X PUT -H "Content-Type: application/json" http://kafka-connect-mongo-assemble.dev22/connectors/mongo-assemble-tasks-source-connector/config -d '{
     "connector.class": "com.teambition.kafka.connect.mongo.assemble.MongoSourceConnector",
     "tasks.max": 2,
     "batch.size": 100,

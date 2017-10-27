@@ -54,3 +54,7 @@ CREATE TABLE IF NOT EXISTS tasks_trend_fact AS (SELECT
 # 获取 jsonb array 元素
 
 `select array_to_json(stages)->0->>'name' from bkpreferences;`
+
+# 获取 json 子集
+
+`select _extra_props::json#>>'{_projectId, $oid}' from base_projectinfos limit 10;`
