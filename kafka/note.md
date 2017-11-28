@@ -181,3 +181,6 @@ curl -XGET http://192.168.0.124:38082/topics
 ```
 
     ["__consumer_offsets","_schemas","mongo_local_test_users","test"]
+
+# 查看 group offset 信息
+`kafka-consumer-groups --bootstrap-server kafka:29092 --group connect-jdbc-kafka-sink2 --describe`

@@ -42,6 +42,7 @@
 * echo $((1+2))
 
 ## wget
+* 断点续传 wget -c
 * wget "http://www.google.com" -O - //-表示定向到标准输出流
 
 ## cut
