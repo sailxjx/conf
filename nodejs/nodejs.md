@@ -87,7 +87,7 @@ foo = -> console.log arguments.callee
 
 #进制转换
 parseInt('ddb93440', 32) ==> 461013880960
-461013880960.toString('32') ==> 'ddb93440'
+(461013880960).toString('32') ==> 'ddb93440'
 
 #base64
 new Buffer('3755740085282937').toString('base64')

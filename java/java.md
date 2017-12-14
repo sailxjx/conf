@@ -30,3 +30,9 @@ jstack 31134
 #### List vs Collection
 
 http://stackoverflow.com/questions/3317381/what-is-the-difference-between-collection-and-list-in-java
+
+## Find java home
+https://stackoverflow.com/questions/11936685/how-to-obtain-the-location-of-cacerts-of-the-default-java-installation
+
+1. macos `/usr/libexec/java_home`
+2. linux `readlink -f /usr/bin/java | sed "s:bin/java::"`
