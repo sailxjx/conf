@@ -35,4 +35,7 @@ http://stackoverflow.com/questions/3317381/what-is-the-difference-between-collec
 https://stackoverflow.com/questions/11936685/how-to-obtain-the-location-of-cacerts-of-the-default-java-installation
 
 1. macos `/usr/libexec/java_home`
-2. linux `readlink -f /usr/bin/java | sed "s:bin/java::"`
+2. linux `readlink -f /usr/bin/java | sed "s:/jre/bin/java::"`
+
+## Unarchive jar
+jar xf jar-file

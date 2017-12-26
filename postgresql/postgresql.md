@@ -62,3 +62,14 @@ CREATE TABLE IF NOT EXISTS tasks_trend_fact AS (SELECT
 # 获取 json 子集
 
 `select _extra_props::json#>>'{_projectId, $oid}' from base_projectinfos limit 10;`
+
+# 时间处理
+格式化时间为字符串 `to_char(getdate(), 'YYYYMMDD')`
+转换时间为天/月/年 `date_trunc('month', getdate())`
+增减时间 `SELECT dateadd(DAY, 1, getdate())`
+
+# Interval 转换为 Integer
+extract(SECONDS FROM (end_time - start_time))
+
+# Bigint 转为时间
+from_unixtimestamp(number)
