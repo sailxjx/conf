@@ -61,3 +61,11 @@ a = 'abcd'
 安装wsgi遇见jk conn_rec' has no member named 'remote_ip的解决方法  
 mod_wsgi.c文件自己改一下，把remote_ip和remote_addr分别替换成client_ip和client_addr，哪一行报错就替换哪一行。
 
+### regular expression / regex / 正则表达式
+
+```
+# 保留所有中英文
+import re
+x = ',ok测试/|内容,'
+re.sub('[^\u0030-\u007a\u4e00-\u9fff]+', '', x)
+```

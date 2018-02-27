@@ -43,3 +43,6 @@ https://stackoverflow.com/questions/31549555/elixir-how-to-convert-a-keyword-lis
 # -- 操作符
 排除两个 list 中相同的部分
 `list1 -- list2`
+
+# 统计方法执行时间
+:timer.tc(&function/1, [arg])

@@ -19,3 +19,14 @@ http://wiki.nginx.org/NginxHttpCoreModule#if_modified_since
 
 ### 使用正则表达式配置域名
 http://nginx.org/en/docs/http/server_names.html
+
+### rewrite + proxy
+
+https://serverfault.com/questions/379675/nginx-reverse-proxy-url-rewrite
+
+```
+rewrite /api(.*) $1  break;
+proxy_pass http://127.0.0.1:8323;
+proxy_redirect     off;
+proxy_set_header   Host $host;
+```
