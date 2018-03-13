@@ -38,3 +38,7 @@ http://stackoverflow.com/questions/5030164/whats-the-difference-between-ctrlc-an
 ### vim macro
 
 q[a-z] -> do anything -> q -> @[a-z] -> @@
+
+### regex replace
+
+替换数字加逗号 `:%s/\d\+,//g`

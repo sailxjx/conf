@@ -69,3 +69,7 @@ import re
 x = ',ok测试/|内容,'
 re.sub('[^\u0030-\u007a\u4e00-\u9fff]+', '', x)
 ```
+
+### any
+
+`any(w in x for w in outlier_words)`

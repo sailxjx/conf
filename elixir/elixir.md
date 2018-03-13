@@ -46,3 +46,9 @@ https://stackoverflow.com/questions/31549555/elixir-how-to-convert-a-keyword-lis
 
 # 统计方法执行时间
 :timer.tc(&function/1, [arg])
+
+# 根据索引获取 / get value by index on list
+
+`Enum.at(list, 1)`
+
+https://til.hashrocket.com/posts/633ba08446-accessing-a-single-element-of-a-list-by-index
