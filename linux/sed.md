@@ -11,3 +11,7 @@ find ./bin/ -type f -exec sed -i '' 's/--network host/--network sandbox_default/
 
 https://linuxconfig.org/how-to-extract-a-number-from-a-string-using-bash-example
 `NUMBER=$(echo "I am 999 years old." | sed 's/[^0-9]*//g')`
+
+## grep 并替换文件
+
+sed -i '' 's/sLA\*ma/{{WH_READER_PASSWORD}}/g' `grep 'sLA\*ma' -lr .`

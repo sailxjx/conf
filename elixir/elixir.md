@@ -52,3 +52,11 @@ https://stackoverflow.com/questions/31549555/elixir-how-to-convert-a-keyword-lis
 `Enum.at(list, 1)`
 
 https://til.hashrocket.com/posts/633ba08446-accessing-a-single-element-of-a-list-by-index
+
+# string 字符串模板 / multiline string / 多行字符串
+
+~s(some string)
+
+# add key to map / map 中增加属性
+
+Map.put(m, :key, "value")
