@@ -46,6 +46,13 @@
   * [Shell](linux/shell.md)
   * [Tar](linux/tar.md)
 - [Lua](lua/lua.md)
+- [Machine Learning]
+  * [Julia](ml/julia.md)
+  * [Numpy](ml/numpy.md)
+  * [Pandas](ml/pandas.md)
+  * [Pyplot](ml/pyplot.md)
+  * [Python](ml/python.md)
+  * [Sklearn](ml/sklearn.md)
 - [Mongo](mongo/mongo.md)
   * [Limbo](mongo/limbo.md)
   * [Mongoose](mongo/mongoose.md)
