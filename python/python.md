@@ -73,3 +73,7 @@ re.sub('[^\u0030-\u007a\u4e00-\u9fff]+', '', x)
 ### any
 
 `any(w in x for w in outlier_words)`
+
+### variable in string
+
+https://stackoverflow.com/questions/2960772/how-do-i-put-a-variable-inside-a-string-in-python
