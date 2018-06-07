@@ -60,3 +60,9 @@ https://til.hashrocket.com/posts/633ba08446-accessing-a-single-element-of-a-list
 # add key to map / map 中增加属性
 
 Map.put(m, :key, "value")
+
+# Start mix phx.server with node name
+
+```
+elixir --name one@127.0.0.1 --cookie mysecretcookie -S mix phoenix.server
+```
