@@ -4,7 +4,7 @@
 
 `MIX_ENV=prod mix compile`
 
-# Observer
+# Observer, gui 方式监控 elixir 进程
 https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html
 iex> :observer.start
 
@@ -66,3 +66,10 @@ Map.put(m, :key, "value")
 ```
 elixir --name one@127.0.0.1 --cookie mysecretcookie -S mix phoenix.server
 ```
+
+# Merge struct
+
+```
+struct(Env, %{a: "B"})
+```
+https://groups.google.com/forum/#!topic/elixir-lang-core/93DBy_WB830
