@@ -32,3 +32,11 @@ https://stackoverflow.com/questions/45106195/pandas-rolling-mean-dont-change-num
 ```
 df.rolling(center=False, window=5).mean().fillna(df)
 ```
+
+# Panel to multiindex dataframe
+
+`panel.to_frame()`
+
+# Get rows from multiindex dataframe
+
+https://stackoverflow.com/questions/18835077/selecting-from-multi-index-pandas

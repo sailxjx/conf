@@ -47,8 +47,3 @@ console.log(testFianlly())
 
         at process._tickCallback (internal/process/next_tick.js:98:9)
 
-
-
-```javascript
-
-```

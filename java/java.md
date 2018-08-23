@@ -23,6 +23,7 @@ System.setProperty("javax.net.ssl.keyStorePassword", "123456")
 
 ## remote 断点调试
 增加 `-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005` 参数
+gradle `./gradlew test -Dorg.gradle.jvmargs='-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=5005,suspend=y'`
 
 #### 查看线程
 jstack 31134

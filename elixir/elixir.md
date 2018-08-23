@@ -34,7 +34,7 @@ https://stackoverflow.com/questions/28180366/what-is-the-benefit-of-keyword-list
 
 The main drawback of using keyword lists is that it's not possible to perform a partial pattern matching on them:
 
-# keyword list to map
+# keyword list to map, key value pair to map
 
 `Enum.into([topic_id: "can't be blank", created_by: "can't be blank"], %{})`
 
@@ -73,3 +73,13 @@ elixir --name one@127.0.0.1 --cookie mysecretcookie -S mix phoenix.server
 struct(Env, %{a: "B"})
 ```
 https://groups.google.com/forum/#!topic/elixir-lang-core/93DBy_WB830
+
+# Multi logger
+
+https://kickinespresso.com/posts/multiple-loggers-in-elixir
+
+# Encode map to yaml
+
+https://elixirforum.com/t/convert-elixir-maps-or-structs-to-yaml/6772/7
+
+`"---\n" <> Poison.encode!(data)`

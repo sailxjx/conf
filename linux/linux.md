@@ -184,3 +184,7 @@ apt-cache search openjdk
 http://stackoverflow.com/questions/750604/freeing-up-a-tcp-ip-port
 `fuser -uv 80/tcp`
 `fuser -k 80/tcp`
+
+## 查找子程序
+
+`pgrep -P $parent_pid`

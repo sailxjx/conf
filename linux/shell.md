@@ -240,3 +240,15 @@ EOF
 ```bash
 top -c -p $(pgrep -d',' -f string_to_match_in_cmd_line)
 ```
+
+# Get exit code of a background process
+https://stackoverflow.com/questions/1570262/get-exit-code-of-a-background-process
+
+# Replace string
+
+```
+orig="AxxBCyyyDEFzzLMN"
+mod=${orig//[xyz]/_}
+```
+
+https://stackoverflow.com/questions/2871181/replacing-some-characters-in-a-string-with-another-character

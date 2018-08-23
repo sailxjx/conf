@@ -16,3 +16,9 @@ awk '{ list[$11] = list[$11] "\t" $0 } END { n = asorti(list, indexes); for (i =
 
 https://stackoverflow.com/questions/8009664/how-to-split-a-delimited-string-into-an-array-in-awk
 awk '{split($0,a,"@");print a[1]}'
+
+## 排除重复行 Remove duplicated lines
+
+https://unix.stackexchange.com/questions/131217/how-to-remove-duplicate-lines-with-awk-whilst-keeping-empty-lines
+
+`cat *.yml  | grep image | awk '!NF || !seen[$0]++ {print $2}'`

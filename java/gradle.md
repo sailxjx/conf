@@ -73,3 +73,7 @@ dependencies {
 ### 切换 gradle wrapper 版本
 
 `./gradlew wrapper --gradle-version=3.1`
+
+# 单独测试某个 class
+
+`./gradlew test --tests com.teambition.kafka.connect.mongo.assemble.handlers.TaskHandlerTest`
