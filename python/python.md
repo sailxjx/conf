@@ -77,3 +77,10 @@ re.sub('[^\u0030-\u007a\u4e00-\u9fff]+', '', x)
 ### variable in string
 
 https://stackoverflow.com/questions/2960772/how-do-i-put-a-variable-inside-a-string-in-python
+
+# Force python output unbuffered
+禁止缓存 stdout 内容
+
+`python -u script.py`
+
+https://stackoverflow.com/questions/107705/disable-output-buffering

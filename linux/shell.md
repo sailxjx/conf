@@ -252,3 +252,7 @@ mod=${orig//[xyz]/_}
 ```
 
 https://stackoverflow.com/questions/2871181/replacing-some-characters-in-a-string-with-another-character
+
+# Add numbers
+
+`V_NEW_PATCH=$(($V_PATCH + 1))`

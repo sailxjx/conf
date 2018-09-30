@@ -6,6 +6,10 @@
 
 `show tag values with key = {key name}`
 
+# Show field keys [on database] [from measurement]
+
+`show field keys on "database"`
+
 # Drop measurement (Drop table)
 
 `drop measurement {name}`
