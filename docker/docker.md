@@ -83,3 +83,7 @@ RUN apt-get update && apt-get install -y \
     s3cmd=1.1.* \
  && rm -rf /var/lib/apt/lists/*
 ```
+
+# Show size of each layer
+
+`docker history ubuntu`

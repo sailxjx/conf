@@ -84,3 +84,29 @@ https://stackoverflow.com/questions/2960772/how-do-i-put-a-variable-inside-a-str
 `python -u script.py`
 
 https://stackoverflow.com/questions/107705/disable-output-buffering
+
+# Call super function
+
+https://stackoverflow.com/questions/805066/call-a-parent-classs-method-from-child-class-in-python
+
+```
+class Foo(Bar):
+    def baz(self, arg):
+        return super(Foo, self).baz(arg)
+```
+
+# Assignment destructoring
+
+```
+[name, *others] = "meta_model__lr__C".split("__")
+```
+
+# Show doc
+
+```
+help(func)
+func.__doc__
+# In notebook
+func?
+func??
+```
