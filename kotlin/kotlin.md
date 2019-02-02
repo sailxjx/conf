@@ -24,3 +24,10 @@ reified V  ==> Boolean
 V::class == Boolean::class  ==> false
 V::class == java.lang.Boolean::class  ==> true
 ```
+
+# Safe cast
+
+```
+// as? 忽略 cast 错误并返回 null
+a as? Type
+```
