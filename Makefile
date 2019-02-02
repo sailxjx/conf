@@ -1,4 +1,4 @@
-default: commit publish
+default: commit
 
 commit:
 	jupyter-nbconvert --to markdown ./**/*.ipynb && git add --all && git commit -am "Update" && git push
