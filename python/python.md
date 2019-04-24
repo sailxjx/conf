@@ -110,3 +110,15 @@ func.__doc__
 func?
 func??
 ```
+
+# print without new line
+
+https://stackoverflow.com/questions/493386/how-to-print-without-newline-or-space
+
+`print('.', end='')`
+
+
+# re.sub with group
+
+https://stackoverflow.com/questions/8157267/handling-backreferences-to-capturing-groups-in-re-sub-replacement-pattern
+`re.sub(r'([\u4e00-\u9fff]) +([\u4e00-\u9fff])', r'\1\2', "重要 接到 a b")`

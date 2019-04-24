@@ -86,3 +86,8 @@ git rev-list v2.0.0-rc1 | head -n 1
 
 #### 提交空的 commit
 git commit --allow-empty -m "Trigger notification"
+
+# Track lfs
+
+https://git-lfs.github.com/
+`git lfs track "*.psd"`

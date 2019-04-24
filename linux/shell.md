@@ -256,3 +256,8 @@ https://stackoverflow.com/questions/2871181/replacing-some-characters-in-a-strin
 # Add numbers
 
 `V_NEW_PATCH=$(($V_PATCH + 1))`
+
+# Copy content of dir to other dirs
+
+https://stackoverflow.com/questions/3643848/copy-files-from-one-directory-into-an-existing-directory
+`cp -R t1/. t2/`
