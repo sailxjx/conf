@@ -40,3 +40,11 @@ df.rolling(center=False, window=5).mean().fillna(df)
 # Get rows from multiindex dataframe
 
 https://stackoverflow.com/questions/18835077/selecting-from-multi-index-pandas
+
+# 计算特征相似度
+
+`df.corr()`
+
+# Describe objects
+
+`df.describe(include=[np.object])`
