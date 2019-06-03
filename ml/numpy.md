@@ -21,3 +21,6 @@ arr = np.array([1, 3, 2, 4, 5])
 print(arr.argsort()[-3:])  # top-3 argmin
 print(arr.argsort()[-3:][::-1])  # top-3 argmax
 ```
+
+# 按特定分布规律生成随机数
+https://docs.scipy.org/doc/numpy/reference/routines.random.html
