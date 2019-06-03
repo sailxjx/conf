@@ -122,3 +122,21 @@ https://stackoverflow.com/questions/493386/how-to-print-without-newline-or-space
 
 https://stackoverflow.com/questions/8157267/handling-backreferences-to-capturing-groups-in-re-sub-replacement-pattern
 `re.sub(r'([\u4e00-\u9fff]) +([\u4e00-\u9fff])', r'\1\2', "重要 接到 a b")`
+
+# 在 jupyter notebook 中安装和引用 package
+
+```
+!pip install --user altair
+import sys
+sys.path.append("/home/sailxjx/.local/lib/python3.5/site-packages")
+import altair as alt
+```
+
+# 获取对象方法名
+
+https://stackoverflow.com/questions/1911281/how-do-i-get-list-of-methods-in-a-python-class
+
+```
+import inspect
+inspect.getmembers(data, predicate=inspect.ismethod)
+```
