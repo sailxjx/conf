@@ -48,3 +48,8 @@ https://stackoverflow.com/questions/18835077/selecting-from-multi-index-pandas
 # Describe objects
 
 `df.describe(include=[np.object])`
+
+# 转换行/列 (pivot)
+
+pivot: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html
+unstack: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.unstack.html#pandas.DataFrame.unstack

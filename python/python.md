@@ -140,3 +140,21 @@ https://stackoverflow.com/questions/1911281/how-do-i-get-list-of-methods-in-a-py
 import inspect
 inspect.getmembers(data, predicate=inspect.ismethod)
 ```
+
+# 包含默认值的字典
+
+https://www.accelebrate.com/blog/using-defaultdict-python/
+
+```
+>>> from collections import defaultdict
+>>> ice_cream = defaultdict(lambda: 'Vanilla')
+>>>
+>>> ice_cream = defaultdict(lambda: 'Vanilla')
+>>> ice_cream['Sarah'] = 'Chunky Monkey'
+>>> ice_cream['Abdul'] = 'Butter Pecan'
+>>> print ice_cream['Sarah']
+Chunky Monkey
+>>> print ice_cream['Joe']
+Vanilla
+>>>
+```
