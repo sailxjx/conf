@@ -158,3 +158,11 @@ Chunky Monkey
 Vanilla
 >>>
 ```
+
+# 解决 pytest test 文件无法 import src 目录模块的问题
+
+`PYTHONPATH=src pytest`
+
+# Bytes to string
+
+`b'abc'.decode('utf-8')`
