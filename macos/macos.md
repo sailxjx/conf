@@ -27,3 +27,6 @@ reboot
 
 # 禁止屏幕闪烁
 sudo killall coreaudiod
+
+# 安装任意来源软件
+sudo spctl --master-disable
