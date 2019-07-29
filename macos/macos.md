@@ -30,3 +30,7 @@ sudo killall coreaudiod
 
 # 安装任意来源软件
 sudo spctl --master-disable
+
+# 录屏
+`Shift + Command + 5`
+https://support.apple.com/zh-cn/HT208721#mojave
