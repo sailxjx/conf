@@ -24,3 +24,7 @@ print(arr.argsort()[-3:][::-1])  # top-3 argmax
 
 # 按特定分布规律生成随机数
 https://docs.scipy.org/doc/numpy/reference/routines.random.html
+
+# 处理异常数据
+masked array
+https://stackoverflow.com/questions/21752989/numpy-efficiently-avoid-0s-when-taking-logmatrix
