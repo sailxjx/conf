@@ -188,3 +188,7 @@ http://stackoverflow.com/questions/750604/freeing-up-a-tcp-ip-port
 ## 查找子程序
 
 `pgrep -P $parent_pid`
+
+## 查看公网 ip
+
+`dig +short myip.opendns.com @resolver1.opendns.com`
