@@ -25,3 +25,7 @@ sudo plugin --url <https://raw.githubusercontent.com/medcl/elasticsearch-rtf/mas
 <http://#{host}:9200/talk_messages_v2/_search?scroll=1m&search_type=scan&size=100>
 
 <http://#{host}:9200/_search/scroll?scroll=1m&scroll_id=#{scrollId}>
+
+# 通过用户名密码访问
+
+`curl -u user:passsword -H 'Content-Type:application/json' -XPUT http://es_host:9200/index`

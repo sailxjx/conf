@@ -13,4 +13,4 @@
 *.tmall.net, *.ucweb.local, *.weiyun.com, *.yunos-inc.com, *.yunos.com,
 *.yuque.com, *.zmxy-corp.com.cn, *alipayobjects.com, 10.*.*.*, 11.*.*.*,
 192.168.*.*, 30.*.*.*, cloudprinter-hz.taobao.ali.com, h5.dingtalk.com,
-*.weibo.com, *.teambition.com, teambition.com
+*.weibo.com, *.teambition.com, teambition.com, *.teambition.net
