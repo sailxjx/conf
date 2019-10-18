@@ -184,3 +184,10 @@ curl -XGET http://192.168.0.124:38082/topics
 
 # 查看 group offset 信息
 `kafka-consumer-groups --bootstrap-server kafka:29092 --group connect-jdbc-kafka-sink2 --describe`
+
+# 中断 reassign partitions
+
+https://stackoverflow.com/questions/30500004/aborting-kafka-reassign-partition-action
+
+1. 登录 zk `zkCli.sh`
+2. 删除 /admin/reassign_partitions `delete /admin/reassign_partitions`
