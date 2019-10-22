@@ -53,3 +53,9 @@ https://stackoverflow.com/questions/18835077/selecting-from-multi-index-pandas
 
 pivot: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html
 unstack: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.unstack.html#pandas.DataFrame.unstack
+
+# 根据时间分组（group by time period）
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Grouper.html
+
+`user_visits.groupby(pd.Grouper(key='add_time', freq='1d')).first()`
