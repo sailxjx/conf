@@ -261,3 +261,10 @@ https://stackoverflow.com/questions/2871181/replacing-some-characters-in-a-strin
 
 https://stackoverflow.com/questions/3643848/copy-files-from-one-directory-into-an-existing-directory
 `cp -R t1/. t2/`
+
+# exec and eval
+
+https://unix.stackexchange.com/questions/296838/whats-the-difference-between-eval-and-exec
+
+* exec: 在当前 shell process 下执行命令，pid 与 sh 相同（正常 shell 执行命令是 fork 一个子进程）
+* eval: 在当前 shell 下执行参数中的命令，类似 sh -c，但是省去了引号
