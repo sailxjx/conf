@@ -192,3 +192,11 @@ http://stackoverflow.com/questions/750604/freeing-up-a-tcp-ip-port
 ## 查看公网 ip
 
 `dig +short myip.opendns.com @resolver1.opendns.com`
+
+# 查看磁盘 IO
+
+`iostat -xtm 1`
+
+# 查看网络 IO
+
+`iftop -i eth0 -B`

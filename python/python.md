@@ -166,3 +166,10 @@ Vanilla
 # Bytes to string
 
 `b'abc'.decode('utf-8')`
+
+# 显示 python 加载模块路径
+
+```
+import sys
+list(path for path in sys.path)
+```

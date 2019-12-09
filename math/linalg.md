@@ -2,7 +2,7 @@
 
 `K(X, Y) = <X·Y> / (||X||*||Y||)`
 
-# l1/l2 norm
+# l1/l2 norm 正则
 
 x = [a, b, c]
 
