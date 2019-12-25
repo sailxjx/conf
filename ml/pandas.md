@@ -59,3 +59,11 @@ unstack: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataF
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Grouper.html
 
 `user_visits.groupby(pd.Grouper(key='add_time', freq='1d')).first()`
+
+# 并行计算 groupby, apply
+
+https://stackoverflow.com/questions/26187759/parallelize-apply-after-pandas-groupby
+
+```
+    retLst = Parallel(n_jobs=multiprocessing.cpu_count())(delayed(func)(group) for name, group in dfGrouped)
+```
