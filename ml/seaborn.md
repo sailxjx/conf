@@ -14,3 +14,10 @@ df = pd.DataFrame(dict(time=np.arange(500),
 g = sns.relplot(x="time", y="value", kind="line", data=df)
 g.fig.autofmt_xdate()
 ```
+
+# 通过 boxplot 查找异常值 outliers
+
+```
+import seaborn as sns
+sns.boxplot(x=boston_df['DIS'])
+```

@@ -27,9 +27,3 @@ plt.plot(xdata, ydata)
 plt.ylim(ymin=0)  # this line
 ```
 
-# 通过 boxplot 查找异常值 outliers
-
-```
-import seaborn as sns
-sns.boxplot(x=boston_df['DIS'])
-```
