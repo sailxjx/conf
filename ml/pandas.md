@@ -67,3 +67,20 @@ https://stackoverflow.com/questions/26187759/parallelize-apply-after-pandas-grou
 ```
     retLst = Parallel(n_jobs=multiprocessing.cpu_count())(delayed(func)(group) for name, group in dfGrouped)
 ```
+
+# 并行计算 apply
+
+```
+from joblib import Parallel, delayed
+import multiprocessing
+
+def parallelize(df, func):
+    partitions = multiprocessing.cpu_count()
+    df_splited = np.array_split(df, partitions)
+    df_splited = Parallel(
+        n_jobs=partitions
+    )(delayed(func)(df) for df in df_splited)
+    return pd.concat(df_splited)
+
+df_feature_extracted = parallelize(df_featured, lambda df: df.apply(extract_base_feature, axis=1))
+```
