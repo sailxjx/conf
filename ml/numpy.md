@@ -28,3 +28,11 @@ https://docs.scipy.org/doc/numpy/reference/routines.random.html
 # 处理异常数据
 masked array
 https://stackoverflow.com/questions/21752989/numpy-efficiently-avoid-0s-when-taking-logmatrix
+
+# 为连续数据分桶 bins
+
+```
+cut_bins = np.flip(-np.logspace(0.1, 3, 10, dtype=int))
+print(cut_bins)
+pd.Series(np.digitize(df_train_featured.created_delta, right=True, bins=cut_bins)).value_counts()
+```
