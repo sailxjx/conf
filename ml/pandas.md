@@ -84,3 +84,8 @@ def parallelize(df, func):
 
 df_feature_extracted = parallelize(df_featured, lambda df: df.apply(extract_base_feature, axis=1))
 ```
+
+# 避免 windows 回车符号
+
+https://stackoverflow.com/questions/34550120/pandas-escape-carriage-return-in-to-csv
+`df = pd.read_csv('./data/task_content.csv.gz', lineterminator='\n')`
