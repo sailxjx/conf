@@ -68,7 +68,7 @@ https://stackoverflow.com/questions/26187759/parallelize-apply-after-pandas-grou
     retLst = Parallel(n_jobs=multiprocessing.cpu_count())(delayed(func)(group) for name, group in dfGrouped)
 ```
 
-# 并行计算 apply
+# 并行计算 apply，多线程
 
 ```
 from joblib import Parallel, delayed
@@ -89,3 +89,9 @@ df_feature_extracted = parallelize(df_featured, lambda df: df.apply(extract_base
 
 https://stackoverflow.com/questions/34550120/pandas-escape-carriage-return-in-to-csv
 `df = pd.read_csv('./data/task_content.csv.gz', lineterminator='\n')`
+
+# 修复编码问题
+CParserError: Error tokenizing data. C error: Buffer overflow caught - possible malformed input file.
+
+
+https://github.com/pandas-dev/pandas/issues/11166
