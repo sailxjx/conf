@@ -173,3 +173,20 @@ Vanilla
 import sys
 list(path for path in sys.path)
 ```
+
+# 中英文字符切分
+
+```
+def get_word_list(s):
+    """
+    把句子按字分开，中文按字分，英文按单词，数字按空格
+    """
+    res = re.compile(r"([\u4e00-\u9fa5])")
+    str1_list = []
+    ret = res.split(s)
+    for ch in ret:
+        ch1 = ch.strip()
+        if len(ch1) > 0:
+            str1_list.append(ch1)
+    return  " ".join(str1_list)
+```
