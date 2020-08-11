@@ -200,3 +200,23 @@ http://stackoverflow.com/questions/750604/freeing-up-a-tcp-ip-port
 # 查看网络 IO
 
 `iftop -i eth0 -B`
+
+# 挂载新磁盘方法
+
+https://blog.csdn.net/zqixiao_09/article/details/51417432
+```
+fdisk /dev/vdb
+-> n
+-> w
+
+mkfs.ext4 /dev/vdb1
+-> y
+
+mkdir /data
+
+mount /dev/vdb1 /data
+
+vim /etc/fstab
+-> /dev/vdb1  /data ext4 defaults        0 0
+```
+
