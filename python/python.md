@@ -190,3 +190,12 @@ def get_word_list(s):
             str1_list.append(ch1)
     return  " ".join(str1_list)
 ```
+
+# int to binary
+
+https://stackoverflow.com/questions/699866/python-int-to-binary-string
+
+```
+>>> "{0:b}".format(37)
+'100101'
+```
