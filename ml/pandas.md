@@ -95,3 +95,9 @@ CParserError: Error tokenizing data. C error: Buffer overflow caught - possible 
 
 
 https://github.com/pandas-dev/pandas/issues/11166
+
+# dataframe 写入 jsonl 文件
+
+`df.to_json(orient='records', lines=True)`
+
+https://stackoverflow.com/questions/51775175/pandas-dataframe-to-jsonl-json-lines-conversion
