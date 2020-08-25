@@ -199,3 +199,12 @@ https://stackoverflow.com/questions/699866/python-int-to-binary-string
 >>> "{0:b}".format(37)
 '100101'
 ```
+
+# defaultdict
+
+https://stackoverflow.com/questions/6589814/what-is-the-difference-between-dict-and-collections-defaultdict
+
+```
+# 初始化未知 key 的默认值
+model = collections.defaultdict(lambda: 1)
+```
