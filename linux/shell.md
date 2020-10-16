@@ -268,3 +268,13 @@ https://unix.stackexchange.com/questions/296838/whats-the-difference-between-eva
 
 * exec: 在当前 shell process 下执行命令，pid 与 sh 相同（正常 shell 执行命令是 fork 一个子进程）
 * eval: 在当前 shell 下执行参数中的命令，类似 sh -c，但是省去了引号
+
+# 避免 shell 在命令中自动增加 '"
+
+使用 eval
+https://stackoverflow.com/questions/6087494/bash-inserting-quotes-into-string-before-execution
+
+# 使用乘法
+
+https://stackoverflow.com/questions/27218141/multiplication-with-expr-in-shell-script
+`expr 2 \* 2`

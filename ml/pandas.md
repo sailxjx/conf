@@ -101,3 +101,14 @@ https://github.com/pandas-dev/pandas/issues/11166
 `df.to_json(orient='records', lines=True)`
 
 https://stackoverflow.com/questions/51775175/pandas-dataframe-to-jsonl-json-lines-conversion
+
+# 随机采样文件内容
+
+https://stackoverflow.com/questions/22258491/read-a-small-random-sample-from-a-big-csv-file-into-a-python-data-frame
+```
+n = 1000000 #number of records in file
+s = 10000 #desired sample size
+filename = "data.txt"
+skip = sorted(random.sample(range(n),n-s))
+df = pandas.read_csv(filename, skiprows=skip)
+```
