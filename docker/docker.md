@@ -87,3 +87,10 @@ RUN apt-get update && apt-get install -y \
 # Show size of each layer
 
 `docker history ubuntu`
+
+# Pretty format stats
+
+https://stackoverflow.com/questions/30732313/is-there-any-way-to-display-container-names-in-docker-stats
+
+`docker stats --format "table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"`
+
