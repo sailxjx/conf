@@ -278,3 +278,9 @@ https://stackoverflow.com/questions/6087494/bash-inserting-quotes-into-string-be
 
 https://stackoverflow.com/questions/27218141/multiplication-with-expr-in-shell-script
 `expr 2 \* 2`
+
+# Sort by human readable size
+
+https://unix.stackexchange.com/questions/524760/how-to-sort-human-readable-size
+
+`du -d 1 -h | sort -h`
