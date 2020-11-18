@@ -220,3 +220,7 @@ vim /etc/fstab
 -> /dev/vdb1  /data ext4 defaults        0 0
 ```
 
+
+# Get my ip，获取本机 ip 地址
+
+`curl ifconfig.me/ip`
