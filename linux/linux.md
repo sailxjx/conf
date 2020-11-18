@@ -224,3 +224,7 @@ vim /etc/fstab
 # Get my ip，获取本机 ip 地址
 
 `curl ifconfig.me/ip`
+
+# Su root
+
+`sudo bash -c 'su -'`
