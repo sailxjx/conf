@@ -36,3 +36,14 @@ cut_bins = np.flip(-np.logspace(0.1, 3, 10, dtype=int))
 print(cut_bins)
 pd.Series(np.digitize(df_train_featured.created_delta, right=True, bins=cut_bins)).value_counts()
 ```
+
+# 使用 numpy 切分滑动窗口
+
+https://stackoverflow.com/questions/6811183/rolling-window-for-1d-arrays-in-numpy
+
+```
+def rolling_window(a, window_size):
+    shape = (a.shape[0] - window_size + 1, window_size) + a.shape[1:]
+    strides = (a.strides[0],) + a.strides
+    return np.lib.stride_tricks.as_strided(a, shape=shape, strides=strides)
+```
