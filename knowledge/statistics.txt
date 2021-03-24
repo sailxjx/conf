@@ -2,5 +2,4 @@
 
 https://deepai.org/machine-learning-glossary-and-terms/simpsons-paradox
 
-辛普森悖论表示两个统计对象 A 和 B 在各自的维度内计算均值 A 均好于
-B，但是两个数据合并后 A 却低于 B。案例可见百科 https://baike.baidu.com/item/%E8%BE%9B%E6%99%AE%E6%A3%AE%E6%82%96%E8%AE%BA/4475862
+辛普森悖论表示两个统计对象 A 和 B 在各自的维度内计算均值 A 均好于 B，但是两个数据合并后 A 却低于 B。案例可见百科 https://baike.baidu.com/item/%E8%BE%9B%E6%99%AE%E6%A3%AE%E6%82%96%E8%AE%BA/4475862
