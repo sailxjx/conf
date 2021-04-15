@@ -27,3 +27,8 @@ plt.plot(xdata, ydata)
 plt.ylim(ymin=0)  # this line
 ```
 
+
+# 不同的 y 轴比例
+
+Plots with different scales
+https://matplotlib.org/stable/gallery/subplots_axes_and_figures/two_scales.html
