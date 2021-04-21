@@ -32,3 +32,23 @@ plt.ylim(ymin=0)  # this line
 
 Plots with different scales
 https://matplotlib.org/stable/gallery/subplots_axes_and_figures/two_scales.html
+
+```
+close = df['Close']
+fig, ax1 = plt.subplots(figsize=(15, 6))
+ax1.plot(close, color='r', lw=2.)
+ax1.plot(close, '^', markersize=10, color='m', label = 'buying signal', markevery = states_buy)
+ax1.plot(close, 'v', markersize=10, color='k', label = 'selling signal', markevery = states_sell)
+plt.legend()
+
+ax2 = ax1.twinx()  # 复制 x 轴
+long = df[df["Close"]>=df["Open"]]
+short = df[df["Close"]<df["Open"]]
+ax2.bar(long.index, long["Volume"], color="g", label="long")
+ax2.bar(short.index, short["Volume"], color="r", label="short")
+ax2.set_ylim(1e6, 1e7)  # 设置不同的 y 轴范围
+
+plt.title('total gains %f, total investment %f%%'%(total_gains, invest))
+plt.legend()
+plt.show()
+```
