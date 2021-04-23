@@ -52,3 +52,17 @@ plt.title('total gains %f, total investment %f%%'%(total_gains, invest))
 plt.legend()
 plt.show()
 ```
+
+# 显示中文
+
+https://stackoverflow.com/questions/39630928/how-to-plot-a-figure-with-chinese-characters-in-label
+
+```
+from matplotlib import font_manager
+
+fontP = font_manager.FontProperties()
+fontP.set_family('SimHei')
+fontP.set_size(10)
+
+plt.legend(loc=0, prop=fontP)
+```
