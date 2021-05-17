@@ -208,3 +208,21 @@ https://stackoverflow.com/questions/6589814/what-is-the-difference-between-dict-
 # 初始化未知 key 的默认值
 model = collections.defaultdict(lambda: 1)
 ```
+
+# logging
+
+```
+import logging
+
+logger = logging.getLogger()
+formatter = logging.Formatter('%(asctime)s %(message)s')
+
+handler1 = logging.StreamHandler()
+handler1.setFormatter(formatter)
+
+handler2 = logging.FileHandler("cartpole.log")
+handler2.setFormatter(formatter)
+
+logger.handlers = [handler1, handler2]
+logger.setLevel(logging.INFO)
+```
