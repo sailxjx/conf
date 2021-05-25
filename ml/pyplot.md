@@ -66,3 +66,13 @@ fontP.set_size(10)
 
 plt.legend(loc=0, prop=fontP)
 ```
+
+# 多个图表
+
+https://matplotlib.org/devdocs/gallery/subplots_axes_and_figures/subplots_demo.html
+```
+fig, (ax1, ax2) = plt.subplots(1, 2)
+fig.suptitle('Horizontally stacked subplots')
+ax1.plot(x, y)
+ax2.plot(x, -y)
+```
