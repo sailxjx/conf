@@ -76,3 +76,7 @@ fig.suptitle('Horizontally stacked subplots')
 ax1.plot(x, y)
 ax2.plot(x, -y)
 ```
+
+# 修改背景色
+
+plt.rcParams['figure.facecolor'] = "#F3F3F3"
