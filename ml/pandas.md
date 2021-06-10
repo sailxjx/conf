@@ -58,7 +58,7 @@ unstack: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataF
 
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Grouper.html
 
-`user_visits.groupby(pd.Grouper(key='add_time', freq='1d')).first()`
+`user_visits.groupby(pd.Grouper(key='add_time', freq='1d')).tail(1)`  # 此处应该使用 tail 而非 last，否则最后的 index 可能会出现原数据集中未出现的日期
 
 # 并行计算 groupby, apply
 
