@@ -112,3 +112,12 @@ filename = "data.txt"
 skip = sorted(random.sample(range(n),n-s))
 df = pandas.read_csv(filename, skiprows=skip)
 ```
+
+# 显示更多行或列
+
+https://pandas.pydata.org/pandas-docs/stable/user_guide/options.html
+
+```
+with pd.option_context("display.max_rows", 10, "display.max_columns", 5):
+  pd.....
+```
