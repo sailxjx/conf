@@ -11,3 +11,9 @@ https://analyticsindiamag.com/reinforcement-learning-policy/
 - off-policy Behaviour policy ≠ Policy used for action selection 不直接更新行为策略，而是通过回报和贪婪算法变相的获得行为策略，例如 q-learning, dqn, ddqn, ddpg，其 act 由随机值和 epsilon 决定
 - on-policy Behaviour policy == Policy used for action selection 直接更新行为策略，act 和评估策略是一致的，例如 sarsa, ppo, trpo
 - offline rl No Behaviour policy 利用离线数据（例如随机行为产生的数据）训练策略，与监督学习类似
+
+# model based vs model free
+
+就是否对环境建模来区分
+
+https://ai.stackexchange.com/questions/4456/whats-the-difference-between-model-free-and-model-based-reinforcement-learning
