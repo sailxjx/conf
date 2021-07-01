@@ -21,3 +21,17 @@ g.fig.autofmt_xdate()
 import seaborn as sns
 sns.boxplot(x=boston_df['DIS'])
 ```
+
+# 热力图 heatmap 查看相关性 corr
+
+```
+import seaborn as sns
+
+corr = data.drop("Y", axis=1).corr()
+ax = sns.heatmap(
+    corr,
+    vmin=-1, vmax=1, center=0,
+    cmap=sns.diverging_palette(20, 220, n=200),
+    square=True
+)
+```
