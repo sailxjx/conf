@@ -47,3 +47,7 @@ def rolling_window(a, window_size):
     strides = (a.strides[0],) + a.strides
     return np.lib.stride_tricks.as_strided(a, shape=shape, strides=strides)
 ```
+
+# 使向量内每个元素相乘
+
+`np.prod(arr)`
