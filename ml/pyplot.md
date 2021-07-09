@@ -80,3 +80,19 @@ ax2.plot(x, -y)
 # 修改背景色
 
 plt.rcParams['figure.facecolor'] = "#F3F3F3"
+
+# 3d 图像
+
+```
+from mpl_toolkits import mplot3d
+
+fig = plt.figure(figsize=(10, 10))
+ax = plt.axes(projection='3d')
+
+x = np.arange(-2, 2, 0.001)  # 偏离 value 范围
+coef = np.tanh(x)  # 系数
+y = mu = np.random.uniform(-1, 1, x.shape[0])  # 趋势收益率
+z = mu * (1 - coef) * (mu > 0) + mu * (1 + coef) * (mu < 0)  # 实际收益率
+
+ax.scatter3D(x, y, z, c=z, cmap='Blues')
+```
