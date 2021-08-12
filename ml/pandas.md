@@ -121,3 +121,7 @@ https://pandas.pydata.org/pandas-docs/stable/user_guide/options.html
 with pd.option_context("display.max_rows", 10, "display.max_columns", 5):
   pd.....
 ```
+
+# 生成按固定间隔的时间点
+
+dates[np.arange(0, len(dates), 61)]
