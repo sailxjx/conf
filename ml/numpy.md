@@ -51,3 +51,10 @@ def rolling_window(a, window_size):
 # 使向量内每个元素相乘
 
 `np.prod(arr)`
+
+# 随机读取 npy 硬盘文件
+
+randomly sample data from npy file saved on disk
+
+https://stackoverflow.com/questions/62574820/shuffling-and-importing-few-rows-of-a-saved-numpy-file
+https://pythonspeed.com/articles/mmap-vs-zarr-hdf5/
