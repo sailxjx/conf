@@ -125,3 +125,9 @@ with pd.option_context("display.max_rows", 10, "display.max_columns", 5):
 # 生成按固定间隔的时间点
 
 dates[np.arange(0, len(dates), 61)]
+
+# Pad missing index
+
+https://stackoverflow.com/questions/38743064/pandas-pad-series-on-top-or-bottom
+
+`first.reindex(range(7))`
