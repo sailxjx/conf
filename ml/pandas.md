@@ -131,3 +131,7 @@ dates[np.arange(0, len(dates), 61)]
 https://stackoverflow.com/questions/38743064/pandas-pad-series-on-top-or-bottom
 
 `first.reindex(range(7))`
+
+# Groupby window slicing
+
+`df.groupby(df.index//5).mean()`
