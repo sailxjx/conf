@@ -96,3 +96,11 @@ z = mu * (1 - coef) * (mu > 0) + mu * (1 + coef) * (mu < 0)  # 实际收益率
 
 ax.scatter3D(x, y, z, c=z, cmap='Blues')
 ```
+
+# 在曲线上放置标记 put markers on plot
+
+```
+ax1.scatter(y_test[y_test==1].index,
+                data.close[y_test==1],
+                s=50, marker="^", c="r", alpha=0.5)
+```
