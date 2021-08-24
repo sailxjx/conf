@@ -11,3 +11,7 @@ https://medium.com/@satnalikamayank12/on-learning-embeddings-for-categorical-dat
 https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/
 
 Embedding 是相对于 OneHotEncoding 来说使维度更低的一种方法
+
+# Autoencoder vs. PCA
+
+https://stackoverflow.com/questions/45722259/keras-autoencoder-vs-pca
