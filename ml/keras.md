@@ -15,3 +15,9 @@ Embedding 是相对于 OneHotEncoding 来说使维度更低的一种方法
 # Autoencoder vs. PCA
 
 https://stackoverflow.com/questions/45722259/keras-autoencoder-vs-pca
+
+```
+input (encoder) -> hidden layer <- output (decoder)
+
+use a new model with structure: input (encoder) -> hidden layer
+```
