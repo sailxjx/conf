@@ -58,3 +58,7 @@ randomly sample data from npy file saved on disk
 
 https://stackoverflow.com/questions/62574820/shuffling-and-importing-few-rows-of-a-saved-numpy-file
 https://pythonspeed.com/articles/mmap-vs-zarr-hdf5/
+
+# 使用相关性系数比较两个向量相似度
+
+`np.corrcoef(x1, x2)`
