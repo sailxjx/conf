@@ -135,3 +135,9 @@ https://stackoverflow.com/questions/38743064/pandas-pad-series-on-top-or-bottom
 # Groupby window slicing
 
 `df.groupby(df.index//5).mean()`
+
+# Multiple index to single index
+
+https://stackoverflow.com/questions/32938060/reverting-from-multiindex-to-single-index-dataframe-in-pandas
+
+`df.index.to_flat_index()`
