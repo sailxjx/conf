@@ -18,3 +18,8 @@ https://www.tensorflow.org/install/source#gpu
 https://github.com/tensorflow/tensorflow/issues/43947
 
 `ln -s /usr/local/cuda-11.1/targets/x86_64-linux/lib/libcusolver.so.11 $(python -c "import tensorflow.python as x; print(x.__path__[0])")/libcusolver.so.10`
+
+# 检查 gpu 是否可用
+
+`tf.test.is_gpu_available()`
+`tf.test.gpu_device_name()`
