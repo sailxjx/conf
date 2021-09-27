@@ -91,3 +91,9 @@ git commit --allow-empty -m "Trigger notification"
 
 https://git-lfs.github.com/
 `git lfs track "*.psd"`
+
+# Check why the file is ignored
+
+https://stackoverflow.com/questions/466764/git-command-to-show-which-specific-files-are-ignored-by-gitignore
+
+`git check-ignore -v file`
