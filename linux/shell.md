@@ -284,3 +284,9 @@ https://stackoverflow.com/questions/27218141/multiplication-with-expr-in-shell-s
 https://unix.stackexchange.com/questions/524760/how-to-sort-human-readable-size
 
 `du -d 1 -h | sort -h`
+
+# Write empty file
+
+https://stackoverflow.com/questions/139261/how-to-create-a-file-with-a-given-size-in-linux
+
+`dd if=/dev/zero of=upload_test bs=75497472 count=1`
