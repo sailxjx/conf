@@ -226,3 +226,7 @@ handler2.setFormatter(formatter)
 logger.handlers = [handler1, handler2]
 logger.setLevel(logging.INFO)
 ```
+
+# Get multiple elements from list
+
+https://stackoverflow.com/questions/18272160/access-multiple-elements-of-list-knowing-their-index
