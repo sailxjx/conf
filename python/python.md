@@ -230,3 +230,7 @@ logger.setLevel(logging.INFO)
 # Get multiple elements from list
 
 https://stackoverflow.com/questions/18272160/access-multiple-elements-of-list-knowing-their-index
+
+# Use global variables inside function
+
+https://stackoverflow.com/questions/10506973/can-not-increment-global-variable-from-function-in-python
