@@ -234,3 +234,5 @@ https://stackoverflow.com/questions/18272160/access-multiple-elements-of-list-kn
 # Use global variables inside function
 
 https://stackoverflow.com/questions/10506973/can-not-increment-global-variable-from-function-in-python
+or with nolocal statment in nested functions
+https://stackoverflow.com/questions/5218895/python-nested-functions-variable-scoping
