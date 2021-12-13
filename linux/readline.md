@@ -1,4 +1,5 @@
-* ctrl+r 查找历史记录
+* ctrl+r 查找历史记录 向后搜索
+* ctrl+s 查找历史记录 向前搜索
 * ctrl+a 行首
 * ctrl+e 行尾
 * ctrl+u 删除行
