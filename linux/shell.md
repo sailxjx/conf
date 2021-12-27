@@ -290,3 +290,9 @@ https://unix.stackexchange.com/questions/524760/how-to-sort-human-readable-size
 https://stackoverflow.com/questions/139261/how-to-create-a-file-with-a-given-size-in-linux
 
 `dd if=/dev/zero of=upload_test bs=75497472 count=1`
+
+# Kill subprocess
+
+https://stackoverflow.com/questions/2618403/how-to-kill-all-subprocesses-of-shell
+
+`pkill -P $$`
