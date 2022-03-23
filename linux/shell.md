@@ -296,3 +296,7 @@ https://stackoverflow.com/questions/139261/how-to-create-a-file-with-a-given-siz
 https://stackoverflow.com/questions/2618403/how-to-kill-all-subprocesses-of-shell
 
 `pkill -P $$`
+
+# 查看进程层级
+
+`ps auxf | grep python | grep -v grep`
