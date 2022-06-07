@@ -94,3 +94,6 @@ https://stackoverflow.com/questions/30732313/is-there-any-way-to-display-contain
 
 `docker stats --format "table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"`
 
+# 保存容器为镜像
+
+docker commit c3f279d17e0a  svendowideit/testimage:version3
