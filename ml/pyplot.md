@@ -65,6 +65,7 @@ fontP.set_family('SimHei')
 fontP.set_size(10)
 
 plt.legend(loc=0, prop=fontP)
+plt.title('债券收益率', fontproperties=fontP)
 ```
 
 # 多个图表
